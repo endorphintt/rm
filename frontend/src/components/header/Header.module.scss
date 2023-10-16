@@ -1,0 +1,53 @@
+.header {
+    padding: 10px 20px 10px 20px;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__menu {
+        width: 30px;
+        height: 12px;
+        background-color: transparent;
+        position: relative;
+        &::after,
+        &::before {
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: white;
+            content: '';
+            right: 0;
+        }
+        &::after {
+            top: 0;
+        }
+        &::before {
+            bottom: 0;
+            width: 20px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__span {
+        color: white;
+    }
+    &__lan {
+        margin-right: 10px;
+        &Item {
+            margin: 0 5px 0 5px;
+            color: white;
+            background-color: transparent;
+            text-transform: uppercase;
+            padding: 1px 2px 1px 2px;
+            border-radius: 1px;
+            transition: 0.5s;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+export const HOME_ROUTE = 'home'
+export const OFFERS_ROUTE = 'offers'
+export const FAQ_ROUTE = 'faq'
+export const ABOUT_ROUTE = 'about'
+export const APARTMENTS_ROUTE = 'apartment'
+export const APARTMENT_ROUTE = 'apartment'
+export const LOGIN_ROUTE = 'login'
+export const SYSTEM_ROUTE = 'system'
