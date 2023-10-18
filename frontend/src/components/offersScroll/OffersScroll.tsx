@@ -30,21 +30,21 @@ const OffersScroll: React.FC = () => {
             namePL: 'pośrednictwo najmu',
             nameEN: 'rental brokerage',
             position: 1,
-            img: './offersBackground',
+            img: './offersBackground.png',
             icon: './img/lupa.png',
         },
         {
             namePL: 'pośrednictwo zakupu',
             nameEN: 'buing brokerage',
             position: 2,
-            img: './offersBackground',
+            img: './offersBackground.png',
             icon: './img/lupa.png',
         },
         {
             namePL: 'zarzadzanie',
             nameEN: 'managing',
             position: 3,
-            img: './offersBackground',
+            img: './offersBackground.png',
             icon: './img/lupa.png',
         },
     ]
@@ -54,62 +54,65 @@ const OffersScroll: React.FC = () => {
             <p className={c.offersScroll__title}>
                 {data === 'pl' ? 'OFERTA' : 'OFFERS'}
             </p>
-            <div
-                className={c.offersScroll__line}
-                style={{
-                    transform: `translate(${position}%)`,
-                }}
-            >
-                {slides.map((slide) => (
-                    <div
-                        className={c.offersScroll__item}
-                        style={{
-                            transform: `scale(${
-                                currentSlide === slide.position ? 1 : 0.6
-                            })`,
-                            opacity: currentSlide === slide.position ? 1 : 0.6,
-                        }}
-                    >
-                        <div className={c.offersScroll__icon_container}>
-                            <img
-                                className={c.offersScroll__icon}
-                                src={slide.icon}
-                                alt={slide.nameEN}
-                            />
-                        </div>
-                        <div className={c.item__cart_container}>
-                            <div className={c.item__cart}>
-                                <p className={c.item__cart_text}>
-                                    {data === 'pl'
-                                        ? slide.namePL
-                                        : slide.nameEN}
-                                </p>
+            <div className={c.offersScroll__line_container}>
+                <div
+                    className={c.offersScroll__line}
+                    style={{
+                        transform: `translate(${position}%)`,
+                    }}
+                >
+                    {slides.map((slide) => (
+                        <div
+                            className={c.offersScroll__item}
+                            style={{
+                                transform: `scale(${
+                                    currentSlide === slide.position ? 1 : 0.8
+                                })`,
+                                opacity:
+                                    currentSlide === slide.position ? 1 : 0.6,
+                            }}
+                        >
+                            <div className={c.offersScroll__icon_container}>
+                                <img
+                                    className={c.offersScroll__icon}
+                                    src={slide.icon}
+                                    alt={slide.nameEN}
+                                />
                             </div>
+                            <div className={c.item__cart_container}>
+                                <div className={c.item__cart}>
+                                    <p className={c.item__cart_text}>
+                                        {data === 'pl'
+                                            ? slide.namePL
+                                            : slide.nameEN}
+                                    </p>
+                                </div>
+                            </div>
+                            <button className={c.offersScroll__details}>
+                                {data === 'pl' ? 'szczegóły' : 'details'}
+                            </button>
                         </div>
-                        <button className={c.offersScroll__details}>
-                            {data === 'pl' ? 'szczegóły' : 'details'}
-                        </button>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <button
+                    className={`${c.offersScroll__button} ${c.left}`}
+                    onClick={() => handleSlide('left')}
+                    style={{
+                        display: currentSlide === 1 ? 'none' : 'block',
+                    }}
+                >
+                    <span></span>
+                </button>
+                <button
+                    style={{
+                        display: currentSlide === 3 ? 'none' : 'block',
+                    }}
+                    className={`${c.offersScroll__button} ${c.right}`}
+                    onClick={() => handleSlide('right')}
+                >
+                    <span></span>
+                </button>
             </div>
-            <button
-                className={`${c.offersScroll__button} ${c.left}`}
-                onClick={() => handleSlide('left')}
-                style={{
-                    display: currentSlide === 1 ? 'none' : 'block',
-                }}
-            >
-                <span></span>
-            </button>
-            <button
-                style={{
-                    display: currentSlide === 3 ? 'none' : 'block',
-                }}
-                className={`${c.offersScroll__button} ${c.right}`}
-                onClick={() => handleSlide('right')}
-            >
-                <span></span>
-            </button>
         </article>
     )
 }
