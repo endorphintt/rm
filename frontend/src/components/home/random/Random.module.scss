@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Kumbh+Sans:wght@300&family=Margarine&display=swap');
+
+.random {
+    min-height: 400px;
+    color: white;
+    max-width: 850px;
+    margin: 0 auto;
+    &_container {
+        margin: 5px 0 5px 0;
+        padding: 100px 0 100px 0;
+        width: 100%;
+        background: url('./line_random.png') 0 0/ 100% 100%;
+        overflow: hidden;
+    }
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    &.first {
+        justify-content: flex-start;
+    }
+    &.second {
+        justify-content: flex-end;
+    }
+}
+
+.item {
+    min-width: 350px;
+    height: 150px;
+    margin: 10px;
+    transition: 0.3s;
+    &.first,
+    &.second,
+    &.third,
+    &.fourth,
+    &.fifth,
+    &.sixth {
+        & .item__title {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & h2 {
+                max-width: 230px;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    &:hover {
+        scale: 1.05;
+        & .item__title {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &.first {
+        background: url('./back_1.png') center center/ cover no-repeat;
+        // & .item__title{
+        //     font-famile: ;
+        // }
+    }
+
+    &.second {
+        background: url('./back_2.png') center center/ cover no-repeat;
+    }
+
+    &.third {
+        background: url('./back_3.png') center center/ cover no-repeat;
+    }
+
+    &.fourth {
+        background: url('./back_4.png') center center/ cover no-repeat;
+    }
+
+    &.fifth {
+        background: url('./back_5.png') center center/ cover no-repeat;
+    }
+
+    &.sixth {
+        background: url('./back_6.png') center center/ cover no-repeat;
+    }
+}
+
+@media (max-width: 750px) {
+    .random {
+        &_container {
+            padding: 50px 0 50px 0;
+        }
+    }
+    .row {
+        flex-wrap: wrap;
+        &.first {
+            justify-content: center;
+        }
+        &.second {
+            justify-content: center;
+        }
+    }
+    .item {
+        min-width: 300px;
+        width: 80%;
+    }
+}

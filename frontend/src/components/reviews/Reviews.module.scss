@@ -1,0 +1,158 @@
+.reviews {
+    color: white;
+    max-width: 850px;
+    margin: 0 auto;
+    &_container {
+        width: 100%;
+        position: relative;
+        padding: 0 40px 0 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__line {
+        display: flex;
+        transition: 0.7s;
+    }
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 220px;
+    height: 220px;
+    flex-grow: 0;
+    background: url('./slide_line.png') 0 0 / cover no-repeat, #4e5258;
+    padding: 10px;
+    border: 0.1px solid #7d765b;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__header {
+        display: flex;
+        height: 30%;
+        align-items: center;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    &__name {
+        max-width: 60%;
+    }
+    &__stars {
+        width: 40%;
+        display: flex;
+        overflow: hidden;
+    }
+    &__text {
+        max-height: 100px;
+        overflow: hidden;
+    }
+    &__button {
+        text-decoration: underline;
+    }
+}
+
+.button {
+    position: absolute;
+    scale: 0.8;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #666666;
+    opacity: 1;
+    top: 40%;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 1px;
+        background-color: white;
+        left: 7px;
+    }
+    &::after {
+        transform: rotate(45deg);
+        bottom: 20px;
+    }
+    &::before {
+        transform: rotate(-45deg);
+        top: 20px;
+    }
+    & span {
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background-color: white;
+        left: 10px;
+        top: 25px;
+    }
+}
+
+.left {
+    left: 3%;
+}
+
+.right {
+    transform: rotate(180deg);
+    right: 3%;
+}
+
+// popup
+
+.popup {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: url('./slide_line.png') 0 0 / 100% 100% no-repeat, black;
+    padding: 10px;
+    border: 0.1px solid #7d765b;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: 1;
+    &__header {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    &__close {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        background-color: transparent;
+        &::before,
+        &::after {
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: white;
+            left: 0px;
+            top: 15px;
+            content: '';
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &__name {
+        font-size: 20px;
+    }
+    &__text {
+        padding: 40px 5px 5px 5px;
+        max-width: 600px;
+    }
+    &__stars {
+        display: flex;
+        overflow: hidden;
+    }
+}

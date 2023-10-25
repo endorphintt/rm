@@ -1,0 +1,47 @@
+.button {
+    width: 180px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    font-family: 'Kaisei Decol';
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: relative;
+    &::after,
+    &::before {
+        position: absolute;
+        height: 1px;
+        width: 30px;
+        background-color: white;
+        content: '';
+        top: 50%;
+    }
+    &::after {
+        left: -50px;
+    }
+    &::before {
+        right: -50px;
+    }
+}
+
+@media (min-width: 676px) {
+    .button {
+        background-color: white;
+        color: black;
+        transition: 0.5s;
+        &:hover {
+            background-color: transparent;
+            color: white;
+            &::after {
+                transition: 0.5s;
+                left: -60px;
+            }
+            &::before {
+                transition: 0.5s;
+                right: -60px;
+            }
+        }
+    }
+}
