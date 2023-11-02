@@ -58,7 +58,7 @@ const Reviews = () => {
     const blockRef = useRef<HTMLDivElement | null>(null)
     const [blockWidth, setBlockWidth] = useState<number | null>(null)
     const [popup, setPopup] = useState<Slide>(reviews[0])
-    const [popupDisplay, setPopupDisplay] = useState<boolean>(true)
+    const [popupDisplay, setPopupDisplay] = useState<boolean>(false)
 
     const showPopup = (slide: Slide) => {
         setPopup(slide)
