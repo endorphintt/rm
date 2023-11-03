@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+@mixin underline {
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: white; /* Колір підкреслення */
+        transform: scaleX(0); /* Початково підкреслення не видно */
+        transform-origin: left;
+        transition: transform 0.5s ease; /* Анімація при наведенні */
+    }
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+.footer {
+    &_container {
+        background-color: #303030;
+        padding: 5px;
+    }
+    font-family: 'Kaisei Decol';
+    color: white;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+    letter-spacing: 1px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid gray;
+    }
+    &__nav {
+        width: 33%;
+        &_item {
+            display: block;
+            background-color: transparent;
+            color: white;
+            letter-spacing: 1px;
+            transition: 0.5s;
+            height: 20px;
+            position: relative;
+            &:first-child {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.175);
+                margin-bottom: 10px;
+            }
+            @include underline();
+        }
+    }
+    &__links {
+        width: 33%;
+        &_title {
+            text-align: center;
+        }
+    }
+    &__socials {
+        margin-top: 0px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    &__social {
+        margin: 10px;
+        background-color: transparent;
+        transition: 0.5s;
+        &:hover {
+            scale: 1.1;
+        }
+        & img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.privacy {
+    text-align: center;
+    padding: 20px;
+    & button {
+        position: relative;
+        background-color: transparent;
+        font-size: 18px;
+        color: white;
+        @include underline();
+    }
+}
+
+@media (max-width: 671px) {
+    .footer {
+        &__body {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__nav {
+            margin-bottom: 50px;
+            width: 150px;
+        }
+        &__links {
+            width: 150px;
+        }
+    }
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.privacyPopup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    &__text {
+        max-width: 500px;
+        color: white;
+        margin-bottom: 50px;
+    }
+    &__close {
+        color: black;
+        background-color: white;
+        border: 1px solid white;
+        transition: 0.5s;
+        padding: 10px 20px 10px 20px;
+        &:hover {
+            background-color: transparent;
+            color: white;
+        }
+    }
+}

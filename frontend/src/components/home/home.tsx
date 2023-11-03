@@ -1,3 +1,5 @@
+import Contact from '../contact/Contact'
+import Footer from '../footer/Footer'
 import HomeAbout from '../homeAbout/homeAbout'
 import InscriptionOne from '../inscriptionOne/InscriptionOne'
 import InscriptionTwo from '../inscriptionTwo/InscriptionTwo'
@@ -9,7 +11,7 @@ import Random from './random/Random'
 
 const Home: React.FC = () => {
     return (
-        <div style={{ height: '10000px', backgroundColor: 'black' }}>
+        <div style={{ backgroundColor: 'black' }}>
             <Hello />
             <InscriptionOne />
             <OffersScroll />
@@ -18,6 +20,8 @@ const Home: React.FC = () => {
             <Managing />
             <Random />
             <Reviews />
+            <Contact />
+            <Footer />
         </div>
     )
 }

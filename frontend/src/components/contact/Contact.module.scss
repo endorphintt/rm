@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+.contact {
+    margin: 0 5px 0 5px;
+    padding: 10vw 0px 10vw 0;
+    color: white;
+    &__title {
+        font-size: 40px;
+        font-family: 'Koulen';
+        margin-bottom: 60px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__body {
+        max-width: 750px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.form {
+    width: 300px;
+    &__item {
+        width: 100%;
+        & input,
+        & textarea {
+            width: 100%;
+            background-color: #252525;
+            border: #6a696470 solid 0.1px;
+            margin-bottom: 10px;
+            padding: 3px;
+            color: white;
+        }
+        & input {
+            height: 30px;
+        }
+        & textarea {
+            height: 200px;
+        }
+    }
+    &__button {
+        width: 100%;
+        height: 30px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+}
+
+.info {
+    color: #a19d9d;
+    max-width: 50%;
+    &__items {
+        margin: 30px 0 30px 0;
+    }
+    &__item {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        justify-content: flex-start;
+        & img {
+            margin-right: 10px;
+        }
+    }
+    &__inscription {
+        font-size: 20px;
+        font-family: 'Kaisel Decol';
+        max-width: 320px;
+    }
+    &__social {
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        &_item {
+            margin: 0 20px 0 20px;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            transition: 0.5s;
+            &:hover {
+                scale: 1.1;
+            }
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 671px) {
+    .contact__body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .info {
+        max-width: 100%;
+        &__item {
+            justify-content: center;
+        }
+        &__social {
+            justify-content: center;
+        }
+    }
+}
