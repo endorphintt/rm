@@ -7,8 +7,12 @@ import {
     LOGIN_ROUTE,
     SYSTEM_ROUTE,
 } from '../../variables/variables'
+import About from '../about/About'
+import Apartments from '../apartments/Apartments'
+import Faq from '../faq/Faq'
 
 import Home from '../home/home'
+import Offers from '../offers/Offers'
 
 interface Routes {
     path: string
@@ -22,19 +26,19 @@ export const publicRoutes: Routes[] = [
     },
     {
         path: OFFERS_ROUTE,
-        Component: Home,
+        Component: Offers,
     },
     {
         path: ABOUT_ROUTE,
-        Component: Home,
+        Component: About,
     },
     {
         path: APARTMENTS_ROUTE,
-        Component: Home,
+        Component: Apartments,
     },
     {
         path: FAQ_ROUTE,
-        Component: Home,
+        Component: Faq,
     },
     {
         path: LOGIN_ROUTE,

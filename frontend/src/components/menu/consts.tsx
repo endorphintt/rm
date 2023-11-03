@@ -1,4 +1,10 @@
-import { HOME_ROUTE } from '../../variables/variables'
+import {
+    ABOUT_ROUTE,
+    APARTMENTS_ROUTE,
+    FAQ_ROUTE,
+    HOME_ROUTE,
+    OFFERS_ROUTE,
+} from '../../variables/variables'
 
 export const items = [
     {
@@ -10,25 +16,25 @@ export const items = [
     {
         nameEN: 'Offers',
         namePL: 'Oferta',
-        path: HOME_ROUTE,
+        path: OFFERS_ROUTE,
         id: 2,
     },
     {
         nameEN: 'Apartments',
         namePL: 'Mieszkania',
-        path: HOME_ROUTE,
+        path: APARTMENTS_ROUTE,
         id: 3,
     },
     {
         nameEN: 'About',
         namePL: 'O nas',
-        path: HOME_ROUTE,
+        path: ABOUT_ROUTE,
         id: 4,
     },
     {
         nameEN: 'FAQ',
         namePL: 'FAQ',
-        path: HOME_ROUTE,
+        path: FAQ_ROUTE,
         id: 5,
     },
 ]
