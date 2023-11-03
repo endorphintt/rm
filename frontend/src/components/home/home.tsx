@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     return (
         <div style={{ backgroundColor: 'black' }}>
             <Hello />
-            <InscriptionOne />
+            {/* <InscriptionOne /> */}
             <OffersScroll />
             <HomeAbout />
             <InscriptionTwo />

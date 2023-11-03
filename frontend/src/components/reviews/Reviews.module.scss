@@ -159,3 +159,10 @@
         overflow: hidden;
     }
 }
+
+@media (min-width: 676px) {
+    .popup {
+        width: 600px;
+        left: calc(50% - 300px);
+    }
+}
