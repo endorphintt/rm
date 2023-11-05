@@ -6,9 +6,11 @@ import {
     ABOUT_ROUTE,
     LOGIN_ROUTE,
     SYSTEM_ROUTE,
+    BLOG_ROUTE,
 } from '../../variables/variables'
 import About from '../about/About'
 import Apartments from '../apartments/Apartments'
+import Blog from '../blog/Blog'
 import Faq from '../faq/Faq'
 
 import Home from '../home/home'
@@ -43,6 +45,10 @@ export const publicRoutes: Routes[] = [
     {
         path: LOGIN_ROUTE,
         Component: Home,
+    },
+    {
+        path: BLOG_ROUTE,
+        Component: Blog,
     },
 ]
 

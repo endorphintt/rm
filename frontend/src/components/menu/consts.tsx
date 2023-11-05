@@ -1,6 +1,7 @@
 import {
     ABOUT_ROUTE,
     APARTMENTS_ROUTE,
+    BLOG_ROUTE,
     FAQ_ROUTE,
     HOME_ROUTE,
     OFFERS_ROUTE,
@@ -32,10 +33,16 @@ export const items = [
         id: 4,
     },
     {
+        nameEN: 'Blog',
+        namePL: 'Blog',
+        path: BLOG_ROUTE,
+        id: 5,
+    },
+    {
         nameEN: 'FAQ',
         namePL: 'FAQ',
         path: FAQ_ROUTE,
-        id: 5,
+        id: 6,
     },
 ]
 

@@ -102,6 +102,10 @@
         &__castle {
             width: 140vw;
         }
+        &__horse {
+            left: calc(50vw - 200px);
+            width: 400px;
+        }
     }
 }
 
@@ -109,6 +113,10 @@
     .hello {
         &__castle {
             width: 200vw;
+        }
+        &__horse {
+            left: calc(50vw - 150px);
+            width: 300px;
         }
     }
 }

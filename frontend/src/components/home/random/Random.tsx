@@ -1,13 +1,23 @@
 import c from './Random.module.scss'
 import { useMyContext } from '../../../context/Context'
+import { useNavigate } from 'react-router-dom'
+import {
+    APARTMENTS_ROUTE,
+    BLOG_ROUTE,
+    OFFERS_ROUTE,
+} from '../../../variables/variables'
 
 const Random = () => {
+    const nav = useNavigate()
     const { data } = useMyContext()
     return (
         <article className={c.random_container}>
             <div className={c.random}>
                 <div className={`${c.row} ${c.first}`}>
-                    <div className={`${c.item} ${c.first}`}>
+                    <div
+                        onClick={() => nav('/' + BLOG_ROUTE)}
+                        className={`${c.item} ${c.first}`}
+                    >
                         <div className={c.item__title}>
                             <h2>
                                 {data === 'pl'
@@ -16,7 +26,10 @@ const Random = () => {
                             </h2>
                         </div>
                     </div>
-                    <div className={`${c.item} ${c.second}`}>
+                    <div
+                        onClick={() => nav('/' + OFFERS_ROUTE)}
+                        className={`${c.item} ${c.second}`}
+                    >
                         <div className={c.item__title}>
                             <h2>
                                 {data === 'pl'
@@ -26,7 +39,10 @@ const Random = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`${c.row} ${c.second}`}>
+                <div
+                    onClick={() => nav('/' + BLOG_ROUTE)}
+                    className={`${c.row} ${c.second}`}
+                >
                     <div className={`${c.item} ${c.third}`}>
                         <div className={c.item__title}>
                             <h2>
@@ -36,7 +52,10 @@ const Random = () => {
                             </h2>
                         </div>
                     </div>
-                    <div className={`${c.item} ${c.fourth}`}>
+                    <div
+                        onClick={() => nav('/' + BLOG_ROUTE)}
+                        className={`${c.item} ${c.fourth}`}
+                    >
                         <div className={c.item__title}>
                             <h2>
                                 {data === 'pl'
@@ -47,7 +66,10 @@ const Random = () => {
                     </div>
                 </div>
                 <div className={`${c.row} ${c.first}`}>
-                    <div className={`${c.item} ${c.fifth}`}>
+                    <div
+                        onClick={() => nav('/' + OFFERS_ROUTE)}
+                        className={`${c.item} ${c.fifth}`}
+                    >
                         <div className={c.item__title}>
                             <h2>
                                 {data === 'pl'
@@ -56,7 +78,10 @@ const Random = () => {
                             </h2>
                         </div>
                     </div>
-                    <div className={`${c.item} ${c.sixth}`}>
+                    <div
+                        onClick={() => nav('/' + APARTMENTS_ROUTE)}
+                        className={`${c.item} ${c.sixth}`}
+                    >
                         <div className={c.item__title}>
                             <h2>
                                 {data === 'pl'

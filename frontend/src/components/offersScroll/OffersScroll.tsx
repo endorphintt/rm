@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useMyContext } from '../../context/Context'
 import c from './OffersScroll.module.scss'
 import BranchButton from '../branchButton/branchButton'
-import { HOME_ROUTE } from '../../variables/variables'
+import { HOME_ROUTE, OFFERS_ROUTE } from '../../variables/variables'
 
 interface slide {
     namePL: string
@@ -94,7 +94,7 @@ const OffersScroll: React.FC = () => {
                                 <BranchButton
                                     PLname="szczegóły"
                                     ENname="details"
-                                    link={HOME_ROUTE}
+                                    link={OFFERS_ROUTE}
                                     data={data}
                                 />
                             </div>

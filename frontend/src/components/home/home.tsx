@@ -11,7 +11,7 @@ import Random from './random/Random'
 
 const Home: React.FC = () => {
     return (
-        <div style={{ backgroundColor: 'black' }}>
+        <div>
             <Hello />
             {/* <InscriptionOne /> */}
             <OffersScroll />

@@ -1,7 +1,7 @@
 import c from './homeAbout.module.scss'
 import { useMyContext } from '../../context/Context'
 import BranchButton from '../branchButton/branchButton'
-import { HOME_ROUTE } from '../../variables/variables'
+import { ABOUT_ROUTE, HOME_ROUTE } from '../../variables/variables'
 
 const HomeAbout: React.FC = () => {
     const { data } = useMyContext()
@@ -55,7 +55,7 @@ const HomeAbout: React.FC = () => {
             </div>
             <div className={c.homeAbout__button}>
                 <BranchButton
-                    link={HOME_ROUTE}
+                    link={ABOUT_ROUTE}
                     PLname="więcej"
                     ENname="more"
                     data={data}

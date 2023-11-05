@@ -7,7 +7,7 @@ const AppRouter = () => {
         isAuth: false,
     }
     return (
-        <div className="appRouter">
+        <div className="appRouter" style={{ backgroundColor: 'black' }}>
             <Routes>
                 {user.isAuth === true &&
                     authRoutes.map(({ path, Component }) => (

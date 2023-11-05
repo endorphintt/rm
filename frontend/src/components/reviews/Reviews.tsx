@@ -16,39 +16,19 @@ const reviews = [
         text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
     },
     {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
+        name: 'Philipe Williams',
+        stars: 5,
+        text: 'Wszystko ok, Realsy pośredniczyli w zakupie mieszkania, nieruchomość była znaleziona bardzo szybko, z dokumentacją i notariuszem był mały problem nie po naszej stronie, ale wszystko się udało! Profesjonalizm na poziomie!',
     },
     {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
+        name: 'Anton Tarasov',
+        stars: 5,
+        text: 'Szukałam mieszkania do wynajęcia przez 3 tygodnie, współpracowałam z wieloma pośrednikami, ale nie mogłam znaleźć tego, czego potrzebowałam. Kolega polecił Realsy i z Panem Igorem poszukiwanie zajęło 3 dni! Połowa mojego zespołu znalazła mieszkanie również przez Realsy. POLECAM',
     },
     {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
-    },
-    {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
-    },
-    {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
-    },
-    {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
-    },
-    {
-        name: 'Katarzyna Dołkowska',
-        stars: 4.5,
-        text: 'Polecam od całego serca, Dmytro pomógł nam ze sprzedażą mieszkania, proces zajął niecały miesiąc i cena transakcyjna była wyższa, niż cena ofertowa!',
+        name: 'Dominika Kwasinska',
+        stars: 5,
+        text: 'Miła współpraca, zespół wspierał mnie w sprzedaży nieruchomości, byłem na konsultacji i chciałem sprzedać we własnym zakresie. Po miesiącu nieudanych prób wróciłem z powrotem do biura i po wystawieniu oferty byliśmy u notariusza po 9 dniach.',
     },
 ]
 

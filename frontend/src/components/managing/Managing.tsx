@@ -1,7 +1,7 @@
 import c from './Managing.module.scss'
 import { useMyContext } from '../../context/Context'
 import BranchButton from '../branchButton/branchButton'
-import { HOME_ROUTE } from '../../variables/variables'
+import { HOME_ROUTE, OFFERS_ROUTE } from '../../variables/variables'
 
 const Managing: React.FC = () => {
     const { data } = useMyContext()
@@ -103,7 +103,7 @@ const Managing: React.FC = () => {
                 data={data}
                 PLname="więcej"
                 ENname="more"
-                link={HOME_ROUTE}
+                link={OFFERS_ROUTE}
             />
         </article>
     )
