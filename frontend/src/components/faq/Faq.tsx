@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useMyContext } from '../../context/Context'
 import PagesTop from '../pagesTop/PagesTop'
 import c from './Faq.module.scss'
@@ -240,6 +240,10 @@ const faqData = [
 const Faq = () => {
     const [activeItem, setActiveItem] = useState<number>(0)
     const { data } = useMyContext()
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [false])
 
     const onItemClick = (id: number) => {
         if (activeItem === id) {

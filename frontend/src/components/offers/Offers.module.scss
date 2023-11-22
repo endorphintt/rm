@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import '../../variables/fonts.scss';
 
 .offers {
     color: white;
@@ -12,9 +12,11 @@
         &_item {
             color: white;
             background-color: transparent;
-            font-family: 'Koulen';
-            font-size: 3vw;
+            font-family: $font-family;
+            text-transform: uppercase;
+            font-size: 2vw;
             position: relative;
+            padding-top: 10px;
             &::after {
                 position: absolute;
                 height: 10px;
@@ -37,7 +39,8 @@
     }
     &__title {
         padding: 30px 10px 0 10px;
-        font-family: 'Koulen';
+        font-family: $font-family;
+        text-transform: uppercase;
         font-size: 40px;
         max-width: 300px;
         letter-spacing: 5px;
@@ -49,30 +52,47 @@
     &__description {
         max-width: 700px;
         padding: 10px;
+        margin: 0 auto;
         &_title {
-            font-family: 'Koulen';
-            font-size: 20px;
+            font-family: $font-family;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 32px;
             letter-spacing: 3px;
+            margin-bottom: 20px;
         }
         &_text {
             margin: 10px 0 10px 0;
-            line-height: 20px;
+            line-height: 22px;
+            font-size: 18px;
+            text-align: center;
         }
     }
     &__steps {
+        position: relative;
         margin-top: 50px;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         background: url('./line_2.svg') 0 0 / 100% no-repeat;
         padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
         &_title {
-            font-family: 'Koulen';
-            font-size: 20px;
+            font-family: $font-family;
+            text-transform: uppercase;
+            font-size: 32px;
             letter-spacing: 3px;
+            text-align: center;
+            margin: 40px;
         }
     }
+}
+
+.more {
+    position: absolute;
+    width: 200px;
+    background-color: transparent;
+    color: rgb(93, 211, 211);
+    left: calc(50% - 100px);
+    bottom: -50px;
+    font-size: 20px;
 }
 
 @media (max-width: 671px) {
@@ -81,5 +101,10 @@
     }
     .body__img {
         width: 100%;
+    }
+    .offers {
+        &__header_item {
+            font-size: 3vw;
+        }
     }
 }

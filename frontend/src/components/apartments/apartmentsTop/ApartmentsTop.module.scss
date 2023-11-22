@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+.pagesTop {
+    height: 30vh;
+    min-height: 100px;
+    background: url('../../pagesTop/pages_back.png') 0 0 / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        color: white;
+        font-size: 32px;
+        font-family: 'Koulen';
+        letter-spacing: 2px;
+    }
+}

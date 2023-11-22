@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import '../../variables/fonts.scss';
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
 
 .offersScroll {
+    font-family: $font-family;
+    text-transform: uppercase;
     width: 100vw;
     margin-top: 100px;
     display: flex;
@@ -17,8 +19,9 @@
         color: white;
         text-align: center;
         font-size: 40px;
-        font-family: 'Koulen';
         letter-spacing: 3px;
+        font-family: $font-family;
+        text-transform: uppercase;
         height: 10vh;
     }
     &__line_container {
@@ -40,7 +43,6 @@
         width: 500px;
         flex: 0 0 100%;
         transition: 1s;
-        background-image: url('./offersBackground.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -127,7 +129,8 @@
         align-items: center;
     }
     &__cart_text {
-        font-family: 'Koulen';
+        font-family: $font-family;
+        text-transform: uppercase;
         font-size: 30px;
         letter-spacing: 3px;
     }
@@ -158,6 +161,9 @@
 
 @media (max-width: 676px) {
     .offersScroll {
+        &__title {
+            margin-top: 20px;
+        }
         margin-top: 0;
         &__icon_container {
             scale: 0.7;

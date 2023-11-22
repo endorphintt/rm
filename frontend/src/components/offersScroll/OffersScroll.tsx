@@ -32,29 +32,29 @@ const OffersScroll: React.FC = () => {
             namePL: 'pośrednictwo najmu',
             nameEN: 'rental brokerage',
             position: 1,
-            img: './offersBackground.png',
+            img: 'url("./img/najem.png")',
             icon: './img/lupa.png',
         },
         {
             namePL: 'pośrednictwo zakupu',
             nameEN: 'buing brokerage',
             position: 2,
-            img: './offersBackground.png',
-            icon: './img/lupa.png',
+            img: "url('./img/zakup.png')",
+            icon: './img/scroll_buying.svg',
         },
         {
-            namePL: 'zarzadzanie',
+            namePL: 'zarządzanie',
             nameEN: 'managing',
             position: 3,
-            img: './offersBackground.png',
-            icon: './img/lupa.png',
+            img: 'url("./img/zarzadzanie.png")',
+            icon: './img/scroll_managing.svg',
         },
     ]
 
     return (
         <article className={c.offersScroll}>
             <p className={c.offersScroll__title}>
-                {data === 'pl' ? 'OFERTA' : 'OFFERS'}
+                {data === 'pl' ? 'USŁUGI' : 'OFFERS'}
             </p>
             <div className={c.offersScroll__line_container}>
                 <div
@@ -72,6 +72,7 @@ const OffersScroll: React.FC = () => {
                                 })`,
                                 opacity:
                                     currentSlide === slide.position ? 1 : 0.6,
+                                backgroundImage: slide.img,
                             }}
                         >
                             <div className={c.offersScroll__icon_container}>

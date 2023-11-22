@@ -1,0 +1,40 @@
+@media (min-width: 480px) {
+    .call {
+        display: none;
+    }
+}
+
+@keyframes call {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(30deg);
+        scale: 1.1;
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.call {
+    z-index: 1000;
+    position: fixed;
+    padding: 0;
+    border: none;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgb(125, 125, 125);
+    &__img {
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+    animation: call 3s infinite 0s ease;
+}

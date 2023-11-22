@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useMyContext } from '../../context/Context'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
@@ -7,6 +8,10 @@ import c from './About.module.scss'
 
 const About = () => {
     const { data } = useMyContext()
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [false])
     return (
         <div className={c.about}>
             <PagesTop title={data === 'pl' ? 'O nas' : 'About'} />

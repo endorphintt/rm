@@ -6,9 +6,16 @@ import { useNavigate } from 'react-router-dom'
 const Hello: React.FC = () => {
     const { data } = useMyContext()
     const nav = useNavigate()
+    const isMobile =
+        /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+        )
 
     return (
-        <article className={c.hello}>
+        <article
+            style={{ height: isMobile ? '90vh' : '100vh' }}
+            className={c.hello}
+        >
             <img
                 className={c.hello__castle}
                 src="./img/castle.png"
@@ -26,7 +33,7 @@ const Hello: React.FC = () => {
                 onClick={() => nav('/' + OFFERS_ROUTE)}
                 className={c.hello__button}
             >
-                {data === 'pl' ? 'oferta' : 'offers'}
+                {data === 'pl' ? 'usługi' : 'offers'}
             </button>
         </article>
     )

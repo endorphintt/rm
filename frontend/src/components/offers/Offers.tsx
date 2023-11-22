@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useMyContext } from '../../context/Context'
 import PagesTop from '../pagesTop/PagesTop'
 import c from './Offers.module.scss'
@@ -126,7 +126,7 @@ const offersData = [
                 text: 'Our goal is to ensure the profitability of investments for our clients. We operate in a way that allows for maximizing rental property profits, meeting client expectations.',
             },
         ],
-        img: './img/offer_1.png',
+        img: './img/zarzadzanie.png',
     },
     {
         titlePL: 'Posrednictwo spszedazy',
@@ -228,7 +228,7 @@ const offersData = [
                 text: 'The sales process concludes with the signing of a notarial agreement, the transfer of funds from the buyer, and the registration of the new owner. We support the seller until the buyer fulfills their obligations, and the property is transferred into their hands.',
             },
         ],
-        img: './img/offer_1.png',
+        img: './img/sprzedaz.png',
     },
     {
         titlePL: 'Posrednictwo zakupu',
@@ -340,7 +340,7 @@ const offersData = [
                 text: 'The purchase process will conclude with the signing of a notarial agreement, the transfer of funds, and the registration of you as the new property owner.',
             },
         ],
-        img: './img/offer_1.png',
+        img: './img/zakup.png',
     },
     {
         titlePL: 'Posrednictwo najmu',
@@ -482,7 +482,7 @@ const offersData = [
                 text: 'If needed, the agent will continue to provide rental proposals and assist in finding your next rental property.',
             },
         ],
-        img: './img/offer_1.png',
+        img: './img/najem.png',
     },
     {
         titlePL: 'Pośrednictwo wynajmu',
@@ -589,16 +589,21 @@ const offersData = [
                 text: 'Our goal is to ensure the profitability of investments for our clients. We operate in a way that allows for maximizing rental property profits, meeting client expectations.',
             },
         ],
-        img: './img/offer_1.png',
+        img: './img/wynajem.png',
     },
 ]
 
 const Offers = () => {
     const { data } = useMyContext()
-    const title = data === 'pl' ? 'OFERTA' : 'OFFERS'
+    const title = data === 'pl' ? 'USŁUGI' : 'OFFERS'
+    const [readMore, setReadMore] = useState<boolean>(false)
 
     const [offerNumber, setOfferNumber] = useState<number>(1)
     const [activeOffer] = offersData.filter((offer) => offer.id === offerNumber)
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [false])
     return (
         <div className={c.offers}>
             <PagesTop title={title} />
@@ -647,12 +652,26 @@ const Offers = () => {
                             : 'What is looks like?'}
                     </div>
                     <Steps
+                        readMore={readMore}
+                        data={data}
                         items={
                             data === 'pl'
                                 ? activeOffer.stepsPL
                                 : activeOffer.stepsEN
                         }
                     />
+                    <button
+                        onClick={() => setReadMore(!readMore)}
+                        className={c.more}
+                    >
+                        {readMore
+                            ? data === 'pl'
+                                ? 'mniej'
+                                : 'less'
+                            : data === 'pl'
+                            ? 'czytaj więcej'
+                            : 'read more'}
+                    </button>
                 </section>
             </section>
             <Reviews />

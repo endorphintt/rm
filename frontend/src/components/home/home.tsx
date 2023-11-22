@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import HomeAbout from '../homeAbout/homeAbout'
@@ -10,6 +11,9 @@ import Hello from './hello/Hello'
 import Random from './random/Random'
 
 const Home: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [false])
     return (
         <div>
             <Hello />

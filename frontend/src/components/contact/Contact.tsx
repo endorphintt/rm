@@ -5,7 +5,7 @@ import FormSuccess from './formSuccess/FormSuccess'
 
 const Contact = () => {
     const { data } = useMyContext()
-    const [state, handleSubmit] = useForm('xqkorkjl')
+    const [state, handleSubmit] = useForm('mknledql')
     if (state.succeeded) {
         return (
             <FormSuccess
@@ -97,7 +97,23 @@ const Contact = () => {
                         </div>
                         <div className={c.info__item}>
                             <img src="./img/mail.png" alt="number" />
-                            <p>biuro@realsymanagament.pl</p>
+                            <p>biuro@realsymanagement.pl</p>
+                        </div>
+                        <div className={c.info__item}>
+                            <img src="./img/location.svg" alt="address" />
+                            <p>Wrocław, ul. Biskupia 11/202, 50-149</p>
+                        </div>
+                        <div className={c.info__item}>
+                            <img src="./img/doc.svg" alt="number" />
+                            <p>NIP: 8971928387</p>
+                        </div>
+                        <div className={c.info__item}>
+                            <img src="./img/doc.svg" alt="number" />
+                            <p>KRS: 0001062684</p>
+                        </div>
+                        <div className={c.info__item}>
+                            <img src="./img/doc.svg" alt="number" />
+                            <p>REGON: 526654935</p>
                         </div>
                     </div>
                     <div className={c.info__social}>

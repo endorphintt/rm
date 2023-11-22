@@ -6,9 +6,11 @@ import Intro from './components/intro/Intro'
 import Menu from './components/menu/Menu'
 import Header from './components/header/Header'
 import { MyContextProvider } from './context/Context'
+import Call from './components/call/call'
+import ContactPopup from './components/ContactPopup/ContactPopup'
 
 function App() {
-    const [loading, setLoading] = useState<boolean>(false)
+    const [loading, setLoading] = useState<boolean>(true)
     const [menu, setMenu] = useState<boolean>(false)
 
     useEffect(() => {
@@ -25,6 +27,8 @@ function App() {
                         <Header setMenu={() => setMenu(true)} />
                         <AppRouter />
                         <Menu menu={menu} setMenu={() => setMenu(false)} />
+                        <Call />
+                        <ContactPopup />
                     </div>
                 )}
             </div>

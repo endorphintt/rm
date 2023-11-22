@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+@import '../../variables/fonts.scss';
 
 .managing {
     display: flex;
@@ -10,11 +10,12 @@
 }
 
 .title {
-    font-family: 'Koulen';
+    font-family: $font-family;
     font-size: 40px;
     max-width: 310px;
     text-align: center;
     margin-bottom: 100px;
+    text-transform: uppercase;
 }
 
 .content {

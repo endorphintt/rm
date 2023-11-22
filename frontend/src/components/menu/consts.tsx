@@ -16,7 +16,7 @@ export const items = [
     },
     {
         nameEN: 'Offers',
-        namePL: 'Oferta',
+        namePL: 'Usługi',
         path: OFFERS_ROUTE,
         id: 2,
     },
@@ -47,7 +47,17 @@ export const items = [
 ]
 
 export const links = [
-    { id: 1, pathToImg: '/img/instagram.svg', link: '', name: '' },
+    {
+        id: 1,
+        pathToImg: '/img/instagram.svg',
+        link: 'https://instagram.com/realsy_management?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr',
+        name: '',
+    },
     { id: 2, pathToImg: '/img/tiktok.svg', link: '', name: '' },
-    { id: 3, pathToImg: '/img/facebook.svg', link: '', name: '' },
+    {
+        id: 3,
+        pathToImg: '/img/facebook.svg',
+        link: 'https://www.facebook.com/profile.php?id=61552262336445',
+        name: '',
+    },
 ]
