@@ -72,12 +72,6 @@ const Apartment = sequelize.define('Apartment', {
     images: {
         type: Sequelize.STRING,
         allowNull: true,
-        get() {
-            return this.getDataValue('images').split(',')
-        },
-        set(val) {
-            this.setDataValue('images', val.join(','))
-        },
     },
     citiesId: {
         type: Sequelize.INTEGER,

@@ -1,4 +1,6 @@
 const { Apartment } = require('../models/models')
+const { v4: uuidv4 } = require('uuid')
+const path = require('path')
 
 const getAllApartments = async (req, res) => {
     try {
@@ -26,9 +28,63 @@ const getApartmentById = async (req, res) => {
 }
 
 const addApartment = async (req, res) => {
-    const { body } = req
     try {
-        const newApartment = await Apartment.create(body)
+        let {
+            namePL,
+            nameEN,
+            price,
+            citiesId,
+            typeId,
+            appointmentId,
+            map,
+            descriptionPL,
+            descriptionEN,
+            square,
+            rooms,
+            floor,
+            czynsz,
+            stan,
+            balkon,
+            parking,
+            heating,
+            address,
+        } = req.body
+
+        // Отримайте файли як об'єкт, а не як об'єкт Sequelize
+        const images = req.files.images
+
+        // Генеруйте унікальне ім'я для кожного файлу та зберігайте файли в папці 'static'
+        const imageNames = Array.isArray(images)
+            ? images.map((image) => {
+                  const fileName = uuidv4() + path.extname(image.name)
+                  image.mv(path.resolve(__dirname, '..', 'static', fileName))
+                  return fileName
+              })
+            : [images]
+
+        // Створюйте запис у базі даних, використовуючи звичайний об'єкт
+        const newApartment = await Apartment.create({
+            namePL,
+            nameEN,
+            price,
+            images: imageNames.join(','), // Зберігайте назви файлів разом, наприклад, "file1.jpg,file2.jpg"
+            citiesId,
+            typeId,
+            appointmentId,
+            map,
+            descriptionPL,
+            descriptionEN,
+            square,
+            rooms,
+            floor,
+            czynsz,
+            stan,
+            balkon,
+            parking,
+            heating,
+            address,
+        })
+
         res.status(201).json(newApartment)
     } catch (error) {
         console.error(error)
