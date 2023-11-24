@@ -85,7 +85,7 @@ const Managing: React.FC = () => {
                     </div>
                     <div className={c.tablet__content}>
                         {tabletData.map((item) => (
-                            <div className={c.tablet__item}>
+                            <div key={item.PLtext} className={c.tablet__item}>
                                 <div className={c.tablet__circle_container}>
                                     <div className={c.tablet__circle}>
                                         {item.circleName}

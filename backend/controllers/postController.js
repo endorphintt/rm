@@ -1,6 +1,7 @@
 const { Post } = require('../models/models')
+const { v4: uuidv4 } = require('uuid')
+const path = require('path')
 
-// Отримати всі пости
 const getAllPosts = async (req, res) => {
     try {
         const posts = await Post.findAll()
@@ -11,7 +12,6 @@ const getAllPosts = async (req, res) => {
     }
 }
 
-// Отримати пост за ID
 const getPostById = async (req, res) => {
     const postId = req.params.id
 
@@ -27,12 +27,21 @@ const getPostById = async (req, res) => {
     }
 }
 
-// Додати новий пост
 const addPost = async (req, res) => {
-    const { date, title, img, text } = req.body
-
     try {
-        const newPost = await Post.create({ date, title, img, text })
+        const { date, title, text } = req.body
+        const image = req.files.img
+
+        const imageName = uuidv4() + path.extname(image.name)
+        image.mv(path.resolve(__dirname, '..', 'static', imageName))
+
+        const newPost = await Post.create({
+            date,
+            title,
+            img: imageName,
+            text,
+        })
+
         res.status(201).json(newPost)
     } catch (error) {
         console.error(error)
@@ -40,7 +49,6 @@ const addPost = async (req, res) => {
     }
 }
 
-// Видалити пост за ID
 const deletePostById = async (req, res) => {
     const postId = req.params.id
 

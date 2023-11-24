@@ -6,11 +6,64 @@
     background: url('../../pagesTop/pages_back.png') 0 0 / cover no-repeat;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     &__title {
         color: white;
         font-size: 32px;
         font-family: 'Koulen';
         letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+}
+
+.filter_container {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.735);
+    width: 420px;
+    height: 70px;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__button {
+        width: 30%;
+        height: 100%;
+        background-color: #dd5e17;
+        color: white;
+    }
+    &__items {
+        width: 69%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__top {
+        display: flex;
+        height: 45%;
+        justify-content: space-between;
+        &_item {
+            width: 49%;
+        }
+    }
+    &__bottom {
+        height: 45%;
+    }
+}
+
+.select {
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 100%;
+}
+
+@media (max-width: 430px) {
+    .filter_container {
+        scale: 0.75;
     }
 }

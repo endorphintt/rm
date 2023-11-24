@@ -1,10 +1,21 @@
 const { Apartment } = require('../models/models')
 const { v4: uuidv4 } = require('uuid')
 const path = require('path')
+const { Op } = require('sequelize')
 
 const getAllApartments = async (req, res) => {
     try {
-        const apartments = await Apartment.findAll()
+        const { appointmentId, typeId, citiesId } = req.query
+
+        // Отримуємо всі квартири з врахуванням фільтрів, якщо вони надані
+        const apartments = await Apartment.findAll({
+            where: {
+                appointmentId: appointmentId || { [Op.not]: null },
+                typeId: typeId || { [Op.not]: null },
+                citiesId: citiesId || { [Op.not]: null },
+            },
+        })
+
         res.status(200).json(apartments)
     } catch (error) {
         console.error(error)

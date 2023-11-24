@@ -1,0 +1,53 @@
+@import '../../../variables/fonts.scss';
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+.page {
+    min-height: 100vh;
+    color: white;
+}
+
+.body {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    &__info {
+        width: 50%;
+    }
+    &__img {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-size: 24px;
+        font-family: $font-family;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__text {
+        padding: 5px;
+        font-family: 'Kaisel Decol';
+        font-size: 18px;
+    }
+}
+
+.data {
+    text-align: right;
+    padding-right: 10px;
+    color: #5a5959;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 676px) {
+    .body {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        &__info {
+            width: 100%;
+        }
+        &__img {
+            width: 80%;
+        }
+    }
+}

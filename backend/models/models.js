@@ -10,7 +10,7 @@ const Review = sequelize.define('Review', {
         unique: true,
     },
     text: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false,
     },
     stars: {
@@ -44,7 +44,7 @@ const Post = sequelize.define('Post', {
         allowNull: false,
     },
     text: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false,
     },
 })
@@ -70,7 +70,7 @@ const Apartment = sequelize.define('Apartment', {
         allowNull: false,
     },
     images: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: true,
     },
     citiesId: {
@@ -90,11 +90,11 @@ const Apartment = sequelize.define('Apartment', {
         allowNull: false,
     },
     descriptionPL: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false,
     },
     descriptionEN: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false,
     },
     square: {

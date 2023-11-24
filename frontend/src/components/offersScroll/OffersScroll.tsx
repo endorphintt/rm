@@ -15,7 +15,6 @@ interface slide {
 const OffersScroll: React.FC = () => {
     const [currentSlide, setSlide] = useState<number>(1)
     const { data } = useMyContext()
-    console.log(currentSlide)
 
     const position = (currentSlide - 1) * 100 * -1
 
@@ -74,6 +73,7 @@ const OffersScroll: React.FC = () => {
                                     currentSlide === slide.position ? 1 : 0.6,
                                 backgroundImage: slide.img,
                             }}
+                            key={slide.namePL}
                         >
                             <div className={c.offersScroll__icon_container}>
                                 <img

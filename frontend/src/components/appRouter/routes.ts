@@ -11,6 +11,7 @@ import {
 import About from '../about/About'
 import Apartments from '../apartments/Apartments'
 import Blog from '../blog/Blog'
+import Post from '../blog/post/Post'
 import Faq from '../faq/Faq'
 
 import Home from '../home/home'
@@ -39,6 +40,10 @@ export const publicRoutes: Routes[] = [
         Component: Apartments,
     },
     {
+        path: APARTMENTS_ROUTE + '/:id',
+        Component: Apartments,
+    },
+    {
         path: FAQ_ROUTE,
         Component: Faq,
     },
@@ -49,6 +54,10 @@ export const publicRoutes: Routes[] = [
     {
         path: BLOG_ROUTE,
         Component: Blog,
+    },
+    {
+        path: BLOG_ROUTE + '/:id',
+        Component: Post,
     },
 ]
 

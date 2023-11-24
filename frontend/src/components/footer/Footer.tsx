@@ -99,7 +99,10 @@ const Footer = () => {
                     </div>
                     <div className={c.footer__nav}>
                         {links.map((link) => (
-                            <button className={c.footer__nav_item}>
+                            <button
+                                key={link.namePL}
+                                className={c.footer__nav_item}
+                            >
                                 {data === 'pl' ? link.namePL : link.nameEN}
                             </button>
                         ))}
