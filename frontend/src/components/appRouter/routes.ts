@@ -16,7 +16,9 @@ import Post from '../blog/post/Post'
 import Faq from '../faq/Faq'
 
 import Home from '../home/home'
+import Login from '../login/Login'
 import Offers from '../offers/Offers'
+import System from '../system/System'
 
 interface Routes {
     path: string
@@ -50,7 +52,7 @@ export const publicRoutes: Routes[] = [
     },
     {
         path: LOGIN_ROUTE,
-        Component: Home,
+        Component: Login,
     },
     {
         path: BLOG_ROUTE,
@@ -65,6 +67,6 @@ export const publicRoutes: Routes[] = [
 export const authRoutes: Routes[] = [
     {
         path: SYSTEM_ROUTE,
-        Component: Home,
+        Component: System,
     },
 ]

@@ -1,15 +1,19 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { publicRoutes, authRoutes } from './routes'
 import { HOME_ROUTE } from '../../variables/variables'
+import { useEffect, useState } from 'react'
 
 const AppRouter = () => {
-    const user = {
-        isAuth: false,
-    }
+    const [isAuth, setIsAuth] = useState<string>('')
+
+    useEffect(() => {
+        setIsAuth(localStorage.token)
+    }, [localStorage.token])
+
     return (
         <div className="appRouter" style={{ backgroundColor: 'black' }}>
             <Routes>
-                {user.isAuth === true &&
+                {isAuth &&
                     authRoutes.map(({ path, Component }) => (
                         <Route key={path} path={path} element={<Component />} />
                     ))}
