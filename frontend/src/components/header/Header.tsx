@@ -34,7 +34,7 @@ const Header: React.FC<Props> = ({ setMenu }) => {
             }}
         >
             <img
-                src="./img/logo_white_small.png"
+                src="/img/logo_white_small.png"
                 alt="realsy management logo"
                 className={c.header__logo}
             />

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useMyContext } from '../../context/Context'
 import { BLOG_ROUTE, HOME_ROUTE } from '../../variables/variables'
-import BranchButton from '../branchButton/branchButton'
 import PagesTop from '../pagesTop/PagesTop'
 import c from './Blog.module.scss'
 import axios from 'axios'

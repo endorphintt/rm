@@ -10,6 +10,7 @@ import {
 } from '../../variables/variables'
 import About from '../about/About'
 import Apartments from '../apartments/Apartments'
+import ApartmentPage from '../apartments/apartment/Apartment'
 import Blog from '../blog/Blog'
 import Post from '../blog/post/Post'
 import Faq from '../faq/Faq'
@@ -41,7 +42,7 @@ export const publicRoutes: Routes[] = [
     },
     {
         path: APARTMENTS_ROUTE + '/:id',
-        Component: Apartments,
+        Component: ApartmentPage,
     },
     {
         path: FAQ_ROUTE,

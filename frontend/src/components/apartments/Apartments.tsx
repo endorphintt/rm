@@ -1,10 +1,15 @@
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
 import { useMyContext } from '../../context/Context'
 import c from './Apartments.module.scss'
 import ApartmentsTop from './apartmentsTop/ApartmentsTop'
 import { useEffect, useState } from 'react'
+import Reviews from '../reviews/Reviews'
+import Contact from '../contact/Contact'
+import Footer from '../footer/Footer'
+import { useNavigate } from 'react-router-dom'
+import { APARTMENTS_ROUTE, BLOG_ROUTE } from '../../variables/variables'
 
-interface Apartment {
+export interface Apartment {
     id: number
     namePL: string
     nameEN: string
@@ -30,6 +35,18 @@ interface Apartment {
 const Apartments = () => {
     const [apartments, setApartments] = useState<Apartment[] | null>(null)
     const { data } = useMyContext()
+    const nav = useNavigate()
+
+    function getStringBeforeComma(inputString: string) {
+        const commaIndex = inputString.indexOf(',')
+
+        if (commaIndex !== -1) {
+            return inputString.substring(0, commaIndex)
+        }
+
+        // Якщо кома не знайдена, повертаємо весь рядок
+        return inputString
+    }
 
     // fetch data
     const fetchData = async (
@@ -70,14 +87,67 @@ const Apartments = () => {
             />
             <div className={c.container}>
                 {apartments ? (
-                    <div>
-                        {apartments.map((item) => (
-                            <p key={item.id}>{item.namePL}</p>
-                        ))}
+                    <div className={c.items}>
+                        {apartments.length != 0 ? (
+                            apartments.map((item) => (
+                                <div
+                                    onClick={() =>
+                                        nav(
+                                            '/' +
+                                                APARTMENTS_ROUTE +
+                                                '/' +
+                                                item.id
+                                        )
+                                    }
+                                    className={c.item}
+                                >
+                                    <div
+                                        style={{
+                                            backgroundImage: `url(${
+                                                process.env.REACT_APP_API_URL +
+                                                '/' +
+                                                getStringBeforeComma(
+                                                    item.images
+                                                )
+                                            })`,
+                                        }}
+                                        className={c.item__img}
+                                    ></div>
+                                    <h4 className={c.item__title}>
+                                        {data === 'pl'
+                                            ? item.namePL
+                                            : item.nameEN}
+                                    </h4>
+                                    <p className={c.item__address}>
+                                        {item.address}
+                                    </p>
+                                    <div className={c.item__info}>
+                                        <p className={c.item__price}>
+                                            {item.price}
+                                        </p>
+                                        <p className={c.item__rooms}>
+                                            {item.rooms}
+                                        </p>
+                                        <p className={c.item__square}>
+                                            {item.square}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p className={c.error}>
+                                {data === 'pl'
+                                    ? 'Niestety nie ma ofert na te parametry'
+                                    : 'Unfortunately, there are no offers for these parameters'}
+                            </p>
+                        )}
                     </div>
                 ) : (
                     <span></span>
                 )}
+                <Reviews />
+                <Contact />
+                <Footer />
             </div>
         </div>
     )

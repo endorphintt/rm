@@ -1,0 +1,78 @@
+.container {
+    position: relative;
+    margin: 10px 0 10px 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    top: calc(50% - 25px);
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: rgba(198, 198, 198, 0.903);
+        width: 6px;
+        height: 43px;
+        left: 22px;
+    }
+    &::before {
+        top: -10px;
+    }
+    &::after {
+        bottom: -10px;
+    }
+}
+
+.left {
+    left: 10px;
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+}
+
+.right {
+    right: 10px;
+    &::after {
+        transform: rotate(45deg);
+    }
+    &::before {
+        transform: rotate(-45deg);
+    }
+}
+.line {
+    position: relative;
+    display: flex;
+    transition: 0.5s;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    min-width: 100vw;
+    &__img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 676px) {
+    .button {
+        scale: 0.8;
+    }
+    .left {
+        left: 0px;
+    }
+    .right {
+        right: 0px;
+    }
+    .slide__img {
+        height: 30vh;
+    }
+}

@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
 .apartments {
     color: white;
+}
+
+.items {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.item {
+    cursor: pointer;
+    width: 32%;
+    aspect-ratio: 1/1;
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    font-family: 'Kaisel Decol';
+    margin: 3px;
+    transition: 0.5s;
+    &:hover {
+        scale: 1.02;
+    }
+    &__img {
+        height: 70%;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__title,
+    &__info,
+    &__address {
+        height: 9%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        overflow: hidden;
+        margin-right: 10px;
+    }
+    &__title {
+        margin-top: 3%;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+    &__price {
+        font-size: 20px;
+    }
+    &__address {
+        color: rgb(160, 160, 161);
+    }
+    &__info {
+        justify-content: space-between;
+    }
+}
+
+.error {
+    color: white;
+    font-family: 'Kaisel Decol';
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    margin: 50px 5px 50px 5px;
+}
+@media (max-width: 676px) {
+    .item {
+        width: 47%;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 90%;
+    }
 }

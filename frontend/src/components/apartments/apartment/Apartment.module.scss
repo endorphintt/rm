@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+
+.body {
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    padding: 5px;
+    font-family: 'Kaisel Decol';
+}
+
+.apartment {
+    &__title {
+        font-size: 22px;
+        margin: 10px 0 10px 0;
+    }
+    &__address {
+        color: #28b112;
+        font-size: 18px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.info {
+    margin: 30px 0 30px 0;
+    &__title {
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    &__items {
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 47.5%;
+    }
+    &__row {
+        border-top: 1px solid rgba(255, 255, 255, 0.225);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0 5px 0;
+    }
+    &__column {
+        width: 50%;
+    }
+}
+
+.description {
+    margin: 30px 0 30px 0;
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &__text {
+        margin: 30px 0 30px 0;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    &__button {
+        color: #28b112;
+        background-color: transparent;
+        font-size: 22px;
+        padding-right: 30px;
+        display: flex;
+        & span {
+            width: 45px;
+            height: 25px;
+            display: block;
+            position: relative;
+            &::after,
+            &::before {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 1px;
+                background-color: #28b112;
+                top: 50%;
+            }
+            &::after {
+                left: 10px;
+                transform: rotate(45deg);
+            }
+            &::before {
+                left: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 676px) {
+    .info {
+        &__items {
+            flex-direction: column;
+        }
+        &__item {
+            width: 100%;
+        }
+    }
+}

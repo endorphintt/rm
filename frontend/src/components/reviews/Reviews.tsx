@@ -103,11 +103,11 @@ const Reviews = () => {
                                                 }%`,
                                             }}
                                         >
-                                            <img src="./img/star.png" />
-                                            <img src="./img/star.png" />
-                                            <img src="./img/star.png" />
-                                            <img src="./img/star.png" />
-                                            <img src="./img/star.png" />
+                                            <img src="/img/star.png" />
+                                            <img src="/img/star.png" />
+                                            <img src="/img/star.png" />
+                                            <img src="/img/star.png" />
+                                            <img src="/img/star.png" />
                                         </div>
                                     </div>
                                     <div className={c.slide__text}>

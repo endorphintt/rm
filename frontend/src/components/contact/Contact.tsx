@@ -88,43 +88,43 @@ const Contact = () => {
                     </h2>
                     <div className={c.info__items}>
                         <div className={c.info__item}>
-                            <img src="./img/call.png" alt="number" />
+                            <img src="/img/call.png" alt="number" />
                             <p>+ 48 573 408 404</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/call.png" alt="number" />
+                            <img src="/img/call.png" alt="number" />
                             <p>+ 48 573 408 585</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/mail.png" alt="number" />
+                            <img src="/img/mail.png" alt="number" />
                             <p>biuro@realsymanagement.pl</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/location.svg" alt="address" />
+                            <img src="/img/location.svg" alt="address" />
                             <p>Wrocław, ul. Biskupia 11/202, 50-149</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/doc.svg" alt="number" />
+                            <img src="/img/doc.svg" alt="number" />
                             <p>NIP: 8971928387</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/doc.svg" alt="number" />
+                            <img src="/img/doc.svg" alt="number" />
                             <p>KRS: 0001062684</p>
                         </div>
                         <div className={c.info__item}>
-                            <img src="./img/doc.svg" alt="number" />
+                            <img src="/img/doc.svg" alt="number" />
                             <p>REGON: 526654935</p>
                         </div>
                     </div>
                     <div className={c.info__social}>
                         <button className={c.info__social_item}>
-                            <img src="./img/ins_gray.png" alt="fb" />
+                            <img src="/img/ins_gray.png" alt="fb" />
                         </button>
                         <button className={c.info__social_item}>
-                            <img src="./img/fb_gray.png" alt="fb" />
+                            <img src="/img/fb_gray.png" alt="fb" />
                         </button>
                         <button className={c.info__social_item}>
-                            <img src="./img/link_gray.png" alt="fb" />
+                            <img src="/img/link_gray.png" alt="fb" />
                         </button>
                     </div>
                 </div>

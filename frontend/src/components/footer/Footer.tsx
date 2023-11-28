@@ -71,7 +71,7 @@ const Footer = () => {
                                 }
                                 className={c.footer__social}
                             >
-                                <img src="./img/fb_gray.png" alt="fb" />
+                                <img src="/img/fb_gray.png" alt="fb" />
                             </button>
                             <button
                                 onClick={() =>
@@ -82,7 +82,7 @@ const Footer = () => {
                                 }
                                 className={c.footer__social}
                             >
-                                <img src="./img/ins_gray.png" alt="ins" />
+                                <img src="/img/ins_gray.png" alt="ins" />
                             </button>
                             <button
                                 onClick={() =>
@@ -93,7 +93,7 @@ const Footer = () => {
                                 }
                                 className={c.footer__social}
                             >
-                                <img src="./img/link_gray.png" alt="ld" />
+                                <img src="/img/link_gray.png" alt="ld" />
                             </button>
                         </div>
                     </div>
