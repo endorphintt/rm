@@ -2,23 +2,20 @@ import { useState } from 'react'
 import c from './ApartmentSlider.module.scss'
 
 interface Props {
-    images: string
+    images: string[]
 }
 
 const ApartmentSlider: React.FC<Props> = ({ images }) => {
     const [position, setPosition] = useState<number>(0)
 
     const changeSlide = (side: boolean) => {
-        if (side && splitByComma(images).length * 100 - 100 > position) {
+        if (side && images.length * 100 - 100 > position) {
             setPosition(position + 100)
         } else if (!side && position > 0) {
             setPosition(position - 100)
         }
     }
 
-    function splitByComma(input: string): string[] {
-        return input.split(',')
-    }
     return (
         <div className={c.container}>
             <div
@@ -27,11 +24,11 @@ const ApartmentSlider: React.FC<Props> = ({ images }) => {
                     transform: `translateX(${-position}vw)`,
                 }}
             >
-                {splitByComma(images).map((slide) => (
+                {images.map((slide) => (
                     <div key={slide} className={c.slide}>
                         <img
                             className={c.slide__img}
-                            src={process.env.REACT_APP_API_URL + '/' + slide}
+                            src={slide}
                             alt="realsy management offers"
                         />
                     </div>
@@ -47,9 +44,7 @@ const ApartmentSlider: React.FC<Props> = ({ images }) => {
             <button
                 style={{
                     opacity:
-                        position === splitByComma(images).length * 100 - 100
-                            ? '0.3'
-                            : '1',
+                        position === images.length * 100 - 100 ? '0.3' : '1',
                 }}
                 onClick={() => changeSlide(true)}
                 className={`${c.button} ${c.right}`}

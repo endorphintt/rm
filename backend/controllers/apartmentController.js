@@ -2,6 +2,7 @@ const { Apartment } = require('../models/models')
 const { v4: uuidv4 } = require('uuid')
 const path = require('path')
 const { Op } = require('sequelize')
+const fs = require('fs')
 
 const getAllApartments = async (req, res) => {
     try {
@@ -107,8 +108,33 @@ const deleteApartmentById = async (req, res) => {
     const { id } = req.params
     try {
         const apartment = await Apartment.findByPk(id)
+
         if (apartment) {
+            // Отримуємо імена файлів для видалення з рядка images
+            const imageNames = apartment.images
+                ? apartment.images.split(',')
+                : []
+
+            // Видаляємо елемент з бази даних
             await apartment.destroy()
+
+            // Видаляємо файли фото з сервера
+            if (imageNames.length > 0) {
+                const staticFolderPath = path.join(__dirname, '..', 'static')
+
+                imageNames.forEach((imageName) => {
+                    const imagePath = path.join(
+                        staticFolderPath,
+                        imageName.trim()
+                    )
+
+                    // Перевіряємо, чи файл існує перед видаленням
+                    if (fs.existsSync(imagePath)) {
+                        fs.unlinkSync(imagePath)
+                    }
+                })
+            }
+
             res.status(204).end()
         } else {
             res.status(404).json({ error: 'apart not found' })

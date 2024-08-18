@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
+select {
+    -webkit-appearance: none; /* Виключити стандартну стрілку у Сафарі */
+    appearance: none;
+    border-radius: 0;
+    padding-left: 5px;
+    /* Додаткові стилі та властивості... */
+}
+select {
+    position: relative;
+    & option {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+select {
+    -webkit-overflow-scrolling: touch;
+    /* Інші стилі... */
+}
+
 .pagesTop {
     height: 30vh;
     min-height: 100px;

@@ -3,6 +3,7 @@ import c from './Header.module.scss'
 import { useEffect, useState } from 'react'
 import { useMyContext } from '../../context/Context'
 import { useNavigate } from 'react-router-dom'
+import { HOME_ROUTE } from '../../variables/variables'
 
 interface Props {
     setMenu: () => void
@@ -35,8 +36,9 @@ const Header: React.FC<Props> = ({ setMenu }) => {
         >
             <img
                 src="/img/logo_white_small.png"
-                alt="realsy management logo"
+                alt="realsy logo"
                 className={c.header__logo}
+                onClick={() => nav('/' + HOME_ROUTE)}
             />
             <div className={c.header__buttons}>
                 <div className={c.header__lan}>

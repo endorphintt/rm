@@ -101,7 +101,7 @@ const Contact = () => {
                         </div>
                         <div className={c.info__item}>
                             <img src="/img/location.svg" alt="address" />
-                            <p>Wrocław, ul. Biskupia 11/202, 50-149</p>
+                            <p>Wrocław, ul. Sienkiewicza 34a/29, 3 piętro</p>
                         </div>
                         <div className={c.info__item}>
                             <img src="/img/doc.svg" alt="number" />

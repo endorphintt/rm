@@ -5,12 +5,12 @@
 }
 
 .items {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .item {
@@ -43,6 +43,7 @@
         margin-top: 3%;
         font-size: 18px;
         text-transform: capitalize;
+        white-space: nowrap;
     }
     &__price {
         font-size: 20px;
@@ -71,6 +72,6 @@
 
 @media (max-width: 480px) {
     .item {
-        width: 90%;
+        width: 100%;
     }
 }

@@ -3,7 +3,6 @@ import c from './Reviews.module.scss'
 import { useMyContext } from '../../context/Context'
 import ReviewsPop from './ReviewsPop'
 import axios from 'axios'
-import { spawn } from 'child_process'
 
 interface Slide {
     name: string
@@ -12,7 +11,6 @@ interface Slide {
 }
 
 const Reviews = () => {
-    // fetch data
     const [ReviewData, setReviewData] = useState<Slide[] | null>(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<Error | null>(null)
@@ -23,7 +21,12 @@ const Reviews = () => {
             const response = await axios.get(url)
             const responseData = response.data
             setReviewData(responseData)
-            setLoading(false)
+            setTimeout(() => {
+                setLoading(false)
+                setTimeout(() => {
+                    updateBlockWidth()
+                }, 1000)
+            }, 1000)
         } catch (error: any) {
             setError(error)
             setLoading(false)
@@ -79,7 +82,7 @@ const Reviews = () => {
         <div>
             {loading ? (
                 <span></span>
-            ) : ReviewData ? (
+            ) : ReviewData !== null ? (
                 <article className={c.reviews_container}>
                     <div className={c.reviews}>
                         <div

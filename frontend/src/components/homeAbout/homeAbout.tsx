@@ -44,7 +44,7 @@ const HomeAbout: React.FC = () => {
                 </div>
                 <img
                     className={c.homeAbout__img}
-                    src="./img/home-about.png"
+                    src="./img/aaa_about_2.png"
                     alt="realsy details"
                 />
                 <img

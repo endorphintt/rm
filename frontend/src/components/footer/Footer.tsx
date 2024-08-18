@@ -6,10 +6,12 @@ import {
     OFFERS_ROUTE,
 } from '../../variables/variables'
 import c from './Footer.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
     const [pop, setPop] = useState<boolean>(false)
     const { data } = useMyContext()
+    const nav = useNavigate()
     const links = [
         {
             namePL: 'Realsy Management',
@@ -48,7 +50,7 @@ const Footer = () => {
                 <div className={c.footer__body}>
                     <div className={c.footer__map}>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2584.3171956993137!2d17.034102483803817!3d51.10933809843993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc27642ef2b15%3A0x8ddb756ed7ea43f0!2sBiskupia%2011%2FLok.%20202%2C%2050-149%20Wroc%C5%82aw!5e0!3m2!1suk!2spl!4v1699569681484!5m2!1suk!2spl"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.232393974256!2d17.04611879636701!3d51.117086120650704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe9d08f66ecc1%3A0xf32ef25eeba66607!2sHenryka%20Sienkiewicza%2034a%2F29%2C%2050-335%20Wroc%C5%82aw!5e0!3m2!1sen!2spl!4v1719098143629!5m2!1sen!2spl"
                             width="200"
                             height="200"
                             loading="lazy"
@@ -102,6 +104,10 @@ const Footer = () => {
                             <button
                                 key={link.namePL}
                                 className={c.footer__nav_item}
+                                onClick={() => {
+                                    nav('/' + link.link)
+                                    console.log('adw')
+                                }}
                             >
                                 {data === 'pl' ? link.namePL : link.nameEN}
                             </button>

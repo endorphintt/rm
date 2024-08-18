@@ -20,7 +20,7 @@ const Menu: React.FC<Props> = ({ setMenu, menu }) => {
         >
             <div className={c.menu__header}>
                 <img
-                    src="./img/RM_8_without_background.png"
+                    src="/img/RM_8_without_background.png"
                     alt="realsy management logo"
                     className={c.menu__logo}
                 />

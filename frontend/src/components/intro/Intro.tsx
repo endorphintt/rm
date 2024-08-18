@@ -6,7 +6,7 @@ const Intro: React.FC = () => {
             <div className={c.intro}>
                 <img
                     className={c.intro__img}
-                    src="./img/rmColumns.png"
+                    src="/img/rmColumns.png"
                     alt="realsy management"
                 />
                 <div className={c.intro__text}>

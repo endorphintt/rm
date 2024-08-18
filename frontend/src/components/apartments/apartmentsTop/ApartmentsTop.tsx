@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import c from './ApartmentsTop.module.scss'
 import axios from 'axios'
 import { useMyContext } from '../../../context/Context'
+import CustomSelect from '../../customSelect/CustomSelect'
 
 interface Props {
     title: string
@@ -59,15 +60,15 @@ const ApartmentsTop: React.FC<Props> = ({ title, fetchData }) => {
     }
 
     const handleTypeChange = (event: any) => {
-        setSelectedType(event.target.value)
+        setSelectedType(event)
     }
 
     const handleAppointmentChange = (event: any) => {
-        setSelectedAppointment(event.target.value)
+        setSelectedAppointment(event)
     }
 
     const handleCityChange = (event: any) => {
-        setSelectedCity(event.target.value)
+        setSelectedCity(event)
     }
 
     useEffect(() => {
@@ -83,66 +84,30 @@ const ApartmentsTop: React.FC<Props> = ({ title, fetchData }) => {
                         <div className={c.filter__items}>
                             <div className={c.filter__top}>
                                 <div className={c.filter__top_item}>
-                                    <select
-                                        value={selectedType}
-                                        onChange={handleTypeChange}
-                                        className={c.select}
-                                    >
-                                        {type.map((item) => (
-                                            <option
-                                                key={item.id}
-                                                value={item.id}
-                                            >
-                                                {data === 'pl'
-                                                    ? item.namePL
-                                                    : item.nameEN}
-                                            </option>
-                                        ))}
-                                    </select>
+                                    <CustomSelect
+                                        data={data}
+                                        options={type}
+                                        onSelect={handleTypeChange}
+                                    />
                                 </div>
                                 <div className={c.filter__top_item}>
-                                    <select
-                                        value={selectedAppointment}
-                                        onChange={handleAppointmentChange}
-                                        className={c.select}
-                                    >
-                                        {appointment.map((item) => (
-                                            <option
-                                                key={item.id}
-                                                value={item.id}
-                                            >
-                                                {data === 'pl'
-                                                    ? item.namePL
-                                                    : item.nameEN}
-                                            </option>
-                                        ))}
-                                    </select>
+                                    <CustomSelect
+                                        data={data}
+                                        options={appointment}
+                                        onSelect={handleAppointmentChange}
+                                    />
                                 </div>
                             </div>
-                            <div className={c.line}></div>
                             <div className={c.filter__bottom}>
-                                <select
-                                    value={selectedCity}
-                                    onChange={handleCityChange}
-                                    className={`${c.select} ${c.city}`}
-                                >
-                                    {city.map((item) => (
-                                        <option key={item.id} value={item.id}>
-                                            {data === 'pl'
-                                                ? item.namePL
-                                                : item.nameEN}
-                                        </option>
-                                    ))}
-                                </select>
+                                <CustomSelect
+                                    data={data}
+                                    options={city}
+                                    onSelect={handleCityChange}
+                                />
                             </div>
                         </div>
                         <button
                             onClick={() => {
-                                console.log(
-                                    selectedAppointment,
-                                    selectedType,
-                                    selectedCity
-                                )
                                 if (
                                     selectedType &&
                                     selectedCity &&

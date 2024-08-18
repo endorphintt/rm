@@ -22,7 +22,7 @@ const Steps: React.FC<Props> = ({ readMore, items, data }) => {
         >
             {items ? (
                 items.map((item) => (
-                    <div className={c.item}>
+                    <div key={item.id} className={c.item}>
                         <div className={c.item__number}>{item.id}</div>
                         <div className={c.item__border}>
                             <span></span>

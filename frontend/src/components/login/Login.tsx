@@ -20,7 +20,9 @@ const Login = () => {
 
             const token = response.data.token
             localStorage.setItem('token', token)
-            nav('/system')
+            setTimeout(() => {
+                nav('/system')
+            }, 2000)
         } catch (error) {
             console.error('Помилка входу:', error)
         }

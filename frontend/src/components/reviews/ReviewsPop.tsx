@@ -35,11 +35,11 @@ const ReviewsPop: React.FC<Props> = ({
                     width: `${(78 / 5) * slide.stars}px`,
                 }}
             >
-                <img src="./img/star.png" />
-                <img src="./img/star.png" />
-                <img src="./img/star.png" />
-                <img src="./img/star.png" />
-                <img src="./img/star.png" />
+                <img src="/img/star.png" />
+                <img src="/img/star.png" />
+                <img src="/img/star.png" />
+                <img src="/img/star.png" />
+                <img src="/img/star.png" />
             </div>
             <p className={c.popup__text}>{slide.text}</p>
         </div>

@@ -7,6 +7,7 @@ import PagesTop from '../../pagesTop/PagesTop'
 import Reviews from '../../reviews/Reviews'
 import Contact from '../../contact/Contact'
 import Footer from '../../footer/Footer'
+import ReactMarkdown from 'react-markdown'
 
 interface Item {
     title: string
@@ -23,7 +24,7 @@ const Post = () => {
     async function getPostById(id: string) {
         try {
             const response = await axios.get(
-                `http://localhost:5435/api/posts/${id}`
+                process.env.REACT_APP_API_URL + `api/posts/${id}`
             )
             setPostData(response.data)
         } catch (error: any) {
@@ -42,18 +43,23 @@ const Post = () => {
                 <div className={c.page}>
                     <PagesTop title="Post" />
                     <div className={c.body}>
-                        <img
-                            src={
-                                process.env.REACT_APP_API_URL +
-                                '/' +
-                                postData.img
-                            }
-                            alt={postData.title + '(photo)'}
+                        <div
+                            style={{
+                                backgroundImage: `url(${
+                                    process.env.REACT_APP_API_URL +
+                                    '/' +
+                                    postData.img
+                                })`,
+                            }}
                             className={c.body__img}
-                        />
+                        ></div>
                         <div className={c.body__info}>
                             <h2 className={c.body__title}>{postData.title}</h2>
-                            <p className={c.body__text}>{postData.text}</p>
+                            <div className={c.body__text}>
+                                <ReactMarkdown skipHtml={true}>
+                                    {postData.text}
+                                </ReactMarkdown>
+                            </div>
                         </div>
                     </div>
                     <p className={c.data}>{postData.date}</p>

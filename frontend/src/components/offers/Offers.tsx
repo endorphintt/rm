@@ -15,58 +15,58 @@ const links = [
     },
     {
         namePL: 'sprzedaż',
-        nameEN: 'selling',
+        nameEN: 'sell',
         id: 2,
     },
     {
         namePL: 'zakup',
-        nameEN: 'purchase',
+        nameEN: 'buy',
         id: 3,
     },
     {
         namePL: 'najem',
-        nameEN: 'leasy',
+        nameEN: 'let',
         id: 4,
     },
     {
         namePL: 'wynajem',
-        nameEN: 'rental',
+        nameEN: 'rent',
         id: 5,
     },
 ]
 
 const offersData = [
     {
-        titlePL: 'zarzązanie najmem hybrydowym',
+        titlePL: 'zarządzanie najmem hybrydowym',
         titleEN: 'Hybrid rental management',
-        textPL: 'Zarzadzanie wynajmem hybrydowym- jes to nasze know-how o ile opcja najbardziej korzystna w przypadku stopy zwrotu z inwestycji. Polega ona na jednoczesnym wynajmie mieszkania w trybie krótkoterminowym oraz dlugoterminowym w zaleznośći od okresu, oblozenia oraz zainteresowania. Dzieki spawnie dostosowanym narzędziom analitycznym zapewniamy największy zysk z wynajmu, minimalizujemy mozliwość pustostanów oraz dbamy o mieszkanie. Kazde mieszkanie nadaje się do takiego trybu najmu więc kazdy może zacząc wspólprace z nami. Zaczynamy oczywiści od przygotowania mieszkania, nasi specjalisci od wyposdazenia przygotują liste zakupów niezbędnych do wyposazenia mieszkania tak aby generowala największy zysk. Po czym zrobimy sesje zdjeciowa i niezwlocznie zaczniemy dzialać z ofertą.',
-        textEN: 'Hybrid rental management - this is our know-how and is the most advantageous option in terms of the rate of return on investment. It involves renting an apartment simultaneously on a short-term and long-term basis, depending on the period, occupancy and interest. Thanks to our customized analytical tools, we ensure the highest rental profit, minimize the possibility of vacancies and take care of the apartment. Every apartment is suitable for this type of rental, so anyone can start cooperation with us. We start, of course, with preparing the apartment; our furnishing specialists will prepare a shopping list necessary to equip the apartment so that it generates the greatest profit. Then we will do a photo session and immediately start working with the offer.',
+        textPL: 'Oferujemy profesjonalne zarządzanie hybrydowym wynajmem nieruchomości, co stanowi naszą specjalność i klucz do optymalizacji zwrotu z inwestycji. Nasza metoda opiera się na równoczesnym oferowaniu mieszkań zarówno w krótkim, jak i długim okresie, elastycznie dostosowując się do zmieniającego się zapotrzebowania, obłożenia oraz preferencji najemców. Dzięki wykorzystaniu zaawansowanych narzędzi analitycznych, gwarantujemy maksymalizację zysków z wynajmu, minimalizując ryzyko braku najemców oraz systematycznie dbając o stan techniczny każdej nieruchomości. Nasza metoda jest uniwersalna i sprawdza się w przypadku każdego typu mieszkania, co otwiera drzwi do współpracy dla wszystkich zainteresowanych.',
+        textEN: 'We offer professional hybrid rental property management, which is our area of expertise and the key to optimizing return on investment. Our method is based on simultaneously offering apartments in both the short and long term, flexibly adapting to changing demand, occupancy and tenant preferences. By using advanced analytical tools, we guarantee to maximize rental returns, minimizing the risk of tenant shortages and systematically taking care of the technical condition of each property. Our method is universal and works for any type of apartment, which opens the door to cooperation for all interested parties.',
         id: 1,
         stepsPL: [
             {
                 id: 1,
                 title: 'Podpisanie umowy:',
-                text: 'Podpisanie umowy najmu to pierwszy krok w formalizacji procesu wynajmu nieruchomości. Umowa określa prawa i obowiązki zarówno najemcy, jak i wynajmującego. Nasz doświadczony zespół prawników zadba o to, aby umowa była klarowna, zgodna z obowiązującymi przepisami i chroniła interesy obu stron.',
+                text: 'Inicjacja naszej współpracy rozpoczyna się od formalnego podpisania umowy, w której określamy warunki naszej pracy i współdziałania.',
             },
             {
                 id: 2,
                 title: 'Przekazanie mieszkania:',
-                text: 'Nasz proces przekazania mieszkania jest dokładny i staranny. Zapewniamy, że nieruchomość jest w doskonałym stanie przed przekazaniem jej najemcy. Wszystkie niezbędne formalności i dokumenty są omówione, a klucze przekazane z należytą starannością.',
+                text: 'Po podpisaniu umowy przejmujemy lokal w zarządzanie na podstawie protokołu zdawczo- odbiorczego.',
             },
             {
                 id: 3,
                 title: 'Doposażenie mieszkania:',
-                text: 'Dbamy o to, aby mieszkanie spełniało standardy najwyższej jakości. W miarę potrzeb i uzgodnień, dokonujemy doposażenia mieszkania, zapewniając komfort i wygodę dla najemcy.',
+                text: 'Dbamy o to, aby mieszkanie spełniało standardy najwyższej jakości. W miarę potrzeb i uzgodnień, dokonujemy doposażenia mieszkania, zapewniając komfort i wygodę dla najemcy. Tworzymy szczegółową listę rzeczy niezbędnych do perfekcyjnego wyposażenia mieszkania. Następnie zajmujemy się zakupem tych przedmiotów na koszt właściciela, dbając o kompleksowe i atrakcyjne wyposażenie.',
             },
             {
                 id: 4,
                 title: 'Sesja zdjęciowa:',
-                text: 'W celu promocji nieruchomości przeprowadzamy profesjonalną sesję zdjęciową. Nasz zespół fotografów i stylistów zadba o to, aby nieruchomość była przedstawiona w najlepszym świetle, co zwiększa atrakcyjność oferty.',
+                text: 'Tworzymy szczegółową listę rzeczy niezbędnych do perfekcyjnego wyposażenia mieszkania. Następnie zajmujemy się zakupem tych przedmiotów na koszt właściciela, dbając o kompleksowe i atrakcyjne wyposażenie.',
             },
             {
                 id: 5,
                 title: 'Przygotowanie oferty:',
-                text: 'Każda oferta wynajmu jest starannie przygotowywana. Wszystkie szczegóły dotyczące nieruchomości, w tym informacje o lokalizacji, metrażu, udogodnieniach i cenach, są dokładnie udokumentowane, aby ułatwić potencjalnym najemcom podjęcie decyzji.',
+                text: 'Opracowujemy starannie przygotowaną ofertę wynajmu, prezentującą mieszkanie w sposób zachęcający dla potencjalnych najemców.',
             },
             {
                 id: 6,
@@ -88,51 +88,51 @@ const offersData = [
             {
                 id: 1,
                 title: 'Signing the Agreement:',
-                text: 'Signing a lease agreement is the first step in formalizing the property rental process. The agreement specifies the rights and obligations of both the tenant and the landlord. Our experienced team of lawyers ensures that the contract is clear, compliant with current regulations, and protects the interests of both parties.',
+                text: 'The initiation of our cooperation begins with the formal signing of a contract, in which we define the terms of our work and cooperation.',
             },
             {
                 id: 2,
-                title: 'Property Handover:',
-                text: 'Our property handover process is thorough and careful. We ensure that the property is in excellent condition before handing it over to the tenant. All necessary formalities and documents are discussed, and the keys are handed over with due diligence.',
+                title: 'Handover of the apartment:',
+                text: 'After signing the contract, we take over management of the premises on the basis of a handover protocol.',
             },
             {
                 id: 3,
-                title: 'Property Enhancement:',
-                text: 'We ensure that the property meets the highest quality standards. As needed and agreed, we enhance the property to provide comfort and convenience for the tenant.',
+                title: 'Upgrading the apartment:',
+                text: 'We make sure that the apartment meets the highest quality standards. As needed and agreed, we upgrade the apartment, ensuring comfort and convenience for the tenant. We create a detailed list of items necessary to furnish the apartment perfectly. We then handle the purchase of these items at the expense of the owner, taking care of comprehensive and attractive furnishings.',
             },
             {
                 id: 4,
-                title: 'Photo Session:',
-                text: 'To promote the property, we conduct a professional photo session. Our team of photographers and stylists ensures that the property is presented in the best light, increasing its attractiveness.',
+                title: 'Photo session:',
+                text: 'Using our own home-staging services, we arrange professional photo shoots that perfectly present the property. Our goal is to capture the full potential of the apartment, attracting the interest of potential clients looking for the perfect place to live.',
             },
             {
                 id: 5,
-                title: 'Preparing the Offer:',
-                text: 'Every rental offer is carefully prepared. All details regarding the property, including information about location, square footage, amenities, and prices, are thoroughly documented to facilitate decision-making for potential tenants.',
+                title: 'Preparation of the offer:',
+                text: 'We develop a carefully prepared rental offer, presenting the apartment in an eye-catching way for potential tenants.',
             },
             {
                 id: 6,
-                title: 'Listing the Offer:',
-                text: 'Our offers are listed on various platforms to reach as many interested tenants as possible. We collaborate with reputable real estate services and utilize our website to maximize offer visibility.',
+                title: 'Listing of the offer:',
+                text: 'Our listings are displayed on various platforms to reach as many interested tenants as possible. We work with well-known real estate websites and use our website to maximize listing visibility.',
             },
             {
                 id: 7,
-                title: 'Marketing Actions:',
-                text: 'Our marketing team undertakes a wide range of actions to promote the property. Advertising campaigns, social media, and other marketing strategies are used to attract the attention of potential tenants.',
+                title: 'Marketing:',
+                text: 'Our marketing team undertakes a wide range of activities to promote the property. Advertising campaigns, social media and other marketing strategies are used to attract the attention of potential tenants.',
             },
             {
                 id: 8,
-                title: 'Take Profit:',
-                text: 'Our goal is to ensure the profitability of investments for our clients. We operate in a way that allows for maximizing rental property profits, meeting client expectations.',
+                title: 'Take profit:',
+                text: `Our goal is to ensure a profitable investment for our clients. We operate in a way that maximizes profits from rental properties. Our Tools and experience allow us to achieve "take profit" according to our client's expectations.`,
             },
         ],
-        img: './img/zarzadzanie.png',
+        img: './img/aaa_offers_1.png',
     },
     {
-        titlePL: 'Posrednictwo spszedazy',
-        titleEN: 'Real Estate Sales Mediation',
-        textPL: 'Posrednictwo spszedazy-  usluga polega na zmaksymalizowaniu zysku ze sprzedazy nieruchomośći. Proces zaczyna się od home stagingu w mieszkaniu w celu zrobienia jakościowej sesji zdjęciowej tak aby mieszkanie odworzylo swoj maksymalny potencjal, po sesji zdjeciowej nasz dzial marketingu zaczyna wystawienie oraz promowanie na wszystkich niezbędnych portalach. Od konkurencji róznimy się tym ze idziemy w noge z czasem i nasza praca z ofertą nie kończy się na wystawieniu oferty na portalach OLX i Otodom, mimo tego nasze oferty tez znajdą się na Instagramie Faceboku oraz Telegramie. Są to bardziej popularne platformy wsród mlodych ludzi. Po wystawieniu oferty zaczynamy poszukiwanie potencjalnego klienta kupującego. Dzięki naszemu dosiadczenie mamy baze klientów poszukujących które zglaszają się bezpośrednio do nas mimo to mamy rówziez baze inwestorow z którymi wspópracujemy. Wieć podjecie wspopracy z nami zapewni dotercie do maksymalnego grona klientów potencjalnie nastawionych na zakup Pańskiej nieruchomości.',
-        textEN: "Real Estate Sales Mediation - Our service aims to maximize profit from the sale of real estate. The process begins with home staging in the apartment to create a high-quality photo session so that the apartment can reveal its maximum potential. After the photo session, our marketing department starts listing and promoting it on all the necessary platforms. What sets us apart from the competition is that we keep up with the times, and our work with the offer doesn't end with listing it on OLX and Otodom. Additionally, our offers can be found on Instagram, Facebook, and Telegram. These are more popular platforms among young people. After listing the offer, we start searching for potential buyers. Thanks to our experience, we have a database of clients who are actively looking and reach out directly to us. Additionally, we also have a database of investors with whom we cooperate. So, partnering with us will ensure reaching a maximum number of potential clients who are inclined to purchase your property.",
+        titlePL: 'Pośrednictwo sprzedaży',
+        titleEN: 'Sales brokerage',
+        textPL: 'Zapraszamy do skorzystania z naszego profesjonalnego pośrednictwa sprzedaży nieruchomości, które opiera się na latach doświadczenia i zaufaniu naszych klientów. Nasza firma oferuje kompleksową obsługę w procesie sprzedaży, dbając o każdy detal i indywidualne potrzeby naszych klientów. Doświadczenie i ekspertyza: Nasz zespół składa się z doświadczonych agentów, którzy posiadają dogłębną wiedzę na temat rynku nieruchomości. Ich ekspertyza pozwala na skuteczne doradztwo i profesjonalne podejście w każdym etapie transakcji. Wsparcie na każdym kroku: Jesteśmy z Tobą od początku do końca procesu sprzedaży. Doradzamy w przygotowaniu nieruchomości do prezentacji, zapewniamy wsparcie prawników oraz dostarczamy pomoc w negocjacjach. Promocja nieruchomości: Dbamy o jak najlepszą promocję nieruchomości, wykorzystując najnowsze narzędzia marketingowe i platformy online, aby dotrzeć do szerokiego grona potencjalnych nabywców. Indywidualne podejście: Rozumiemy, że każda nieruchomość jest wyjątkowa. Dlatego dostosowujemy nasze strategie do specyfiki każdej oferty, by zapewnić optymalne rezultaty. Transparentność i uczciwość: Nasza firma działa na zasadzie pełnej transparentności. Zapewniamy uczciwe i jasne warunki współpracy oraz regularne raporty dotyczące postępów w procesie sprzedaży. Jeśli szukasz rzetelnej i profesjonalnej obsługi w procesie sprzedaży nieruchomości, jesteśmy gotowi, by być Twoim zaufanym partnerem. Skontaktuj się z nami już dziś, aby rozpocząć drogę do udanej transakcji!',
+        textEN: "We want to invite you to use our professional real estate sales brokerage, which is based on years of experience and trust of our clients. Our company offers comprehensive services in the sales process, taking care of every detail and individual needs of our clients. Experience and expertise: Our team consists of experienced agents who have in-depth knowledge of the real estate market. Their expertise allows for effective advice and a professional approach at every stage of the transaction. Support every step of the way: We are with you from the beginning to the end of the sales process. We assist you in preparing the property for presentation, provide legal support and negotiation assistance. Property promotion: We take care of the best possible promotion of the property, using the most advanced marketing tools and online platforms to reach a wide range of potential buyers. Customized approach: We understand that every property is unique. That's why we tailor our strategies to the specifics of each listing to ensure optimal results.     5. Transparency and honesty: Our company operates on the principle of full transparency. We provide fair and clear terms of cooperation and regular reports on the progress of the sales process. If you are looking for reliable and professional service in the process of selling your property, we are ready to be your trusted partner. Contact us today let your journey to a successful transaction get started!",
         id: 2,
         stepsPL: [
             {
@@ -158,7 +158,7 @@ const offersData = [
             {
                 id: 5,
                 title: 'Ekspozycja oferty',
-                text: 'W odpowiednim momencie opublikujemy ofertę sprzedaży twojej nieruchomości. Pojawi się ona w wielu kanałach, w tym stronie Realsy Management, którą odwiedza duża grupa potencjalnych nabywców. Jednocześnie, prezentujemy ofertę kupującym, którzy już zarejestrowali się w naszej bazie.',
+                text: 'W odpowiednim momencie opublikujemy ofertę sprzedaży twojej nieruchomości. Pojawi się ona na wielu portalach, w tym również stronie na Realsy Management, którą odwiedza duża grupa potencjalnych nabywców. Jednocześnie, prezentujemy ofertę klientom poszukującym z naszej bazy, którzy są już zainteresowani zakupem nieruchomości.',
             },
             {
                 id: 6,
@@ -173,7 +173,7 @@ const offersData = [
             {
                 id: 8,
                 title: 'Umowa sprzedaży',
-                text: 'Gdy zaakceptujesz warunki oferty kupna, przechodzimy do sporządzenia umowy sprzedaży u notariusza. Realsy Management korzysta z zaufanych biur notarialnych i może polecić radców prawnych, jeżeli potrzebne są dodatkowe konsultacje. Zwykle najpierw podpisywana jest umowa przedwstępna, poprzedzająca końcową. Dla nabywców gotówkowych, wystarczy jedynie ta druga. Twój agent przeprowadzi cię przez proces notarialny, zabezpieczając twój interes.',
+                text: 'Gdy zaakceptujesz ofertę, przechodzimy do sporządzenia umowy sprzedaży u notariusza. Realsy Management korzysta z zaufanych biur notarialnych i może polecić radców prawnych, jeżeli potrzebne są dodatkowe konsultacje. Zwykle najpierw podpisywana jest umowa przedwstępna, poprzedzająca końcową. Dla nabywców gotówkowych, wystarczy jedynie ta druga. Twój agent przeprowadzi cię przez proces notarialny, zabezpieczając twój interes.',
             },
             {
                 id: 9,
@@ -204,8 +204,8 @@ const offersData = [
             },
             {
                 id: 5,
-                title: 'Listing the Offer',
-                text: 'At the right time, we will publish the offer to sell your property. It will appear on various channels, including the Realsy Management website, which is visited by a large group of potential buyers. At the same time, we present the offer to buyers who have already registered in our database.',
+                title: 'Visibility of the listing:',
+                text: 'At the right time, we will publish a listing of the sale of your property. It will appear on many portals, including the website of Realsy Management, which is visited by a large group of potential buyers. At the same time, we present the offer to search clients from our database who are already interested in buying the property.',
             },
             {
                 id: 6,
@@ -219,8 +219,8 @@ const offersData = [
             },
             {
                 id: 8,
-                title: 'Sales Agreement',
-                text: "Once you accept the terms of the purchase offer, we proceed to draw up a sales agreement at the notary's office. Realsy Management uses trusted notary offices and can recommend legal advisors if additional consultations are needed. Usually, a preliminary agreement is signed first, preceding the final one. For cash buyers, only the latter is sufficient. Your agent will guide you through the notarial process, securing your interests.",
+                title: 'Sales contract:',
+                text: 'Once you accept the offer, we proceed to draw up the sales contract at the notary. Realsy Management uses trusted notary offices and can recommend legal advisors if additional consultation is needed. Usually a preliminary agreement is signed first, preceding the final one. For cash buyers, only the latter will suffice. Your agent will guide you through the notarization process, safeguarding your interest.',
             },
             {
                 id: 9,
@@ -228,13 +228,13 @@ const offersData = [
                 text: 'The sales process concludes with the signing of a notarial agreement, the transfer of funds from the buyer, and the registration of the new owner. We support the seller until the buyer fulfills their obligations, and the property is transferred into their hands.',
             },
         ],
-        img: './img/sprzedaz.png',
+        img: './img/aaa_offers_2.png',
     },
     {
-        titlePL: 'Posrednictwo zakupu',
-        titleEN: 'Real Estate Purchase Brokerage',
-        textPL: 'Posrednictwo zakupu- usluga polega na poszukiwanie najkorzystniejszej opcji zakupu nieruchomośći. Dzieki naszemu doświadczeniu pomagamy naszym klientom trafić w najbardzij atrakcyjne oferty. Dzialamy zarówno na rynku wtórnym tak i na pierwotnym. Oprzocz tego możemy zaoferować naszym klientom oferty offmarket tak zwane z pod lady. Dziki wspolpracy z nami otrzymają Państwo możliwość uzyskania najliepszej możliwej ceny za nieruchomość, doradctwo przy calym procesie zakupu oraz obsluge pozakupową. Wspieramy w poszukiwaniu ekipy remontowej, architektów wnentrz, przeprowadzkach.',
-        textEN: '"Real Estate Purchase Brokerage" is a service that involves searching for the most advantageous property purchase options. Thanks to our experience, we assist our clients in finding the most attractive offers. We operate in both the secondary and primary real estate markets. In addition, we can offer our clients off-market deals, also known as "under the counter" offers. Through cooperation with us, you will have the opportunity to obtain the best possible price for the property, receive advice throughout the entire purchase process, and post-purchase support. We assist in finding a renovation team, interior designers, and relocation services.',
+        titlePL: 'Pośrednictwo zakupu',
+        titleEN: 'Purchase Brokerage',
+        textPL: 'Zapraszamy do skorzystania z naszego profesjonalnego pośrednictwa w procesie zakupu nieruchomości, które opiera się na dogłębnej wiedzy rynkowej i pełnym zaangażowaniu naszego zespołu. Nasza firma oferuje kompleksowe wsparcie i doradztwo, aby zapewnić Ci udaną transakcję zakupu idealnej nieruchomości. Ekspercka wiedza i wsparcie: Nasi doświadczeni agenci posiadają głęboką wiedzę na temat rynku nieruchomości. Ich zaangażowanie i ekspertyza pozwala na skuteczne doradztwo w wyborze idealnej nieruchomości, dopasowanej do Twoich preferencji i potrzeb. Poszukiwanie nieruchomości: Aktywnie poszukujemy nieruchomości spełniających Twoje oczekiwania. Dzięki naszym zasobom i sieci kontaktów, znajdujemy propozycje dostosowane do Twoich wymagań. Analiza i negocjacje: Pomagamy w dokładnej analizie rynku, wycenie nieruchomości oraz prowadzimy negocjacje w Twoim imieniu, dbając o uzyskanie najlepszych warunków zakupu. Asysta prawna i formalności: Zapewniamy wsparcie prawników oraz pomagamy w formalnościach związanych z procesem zakupu, zapewniając płynne i bezproblemowe przejście przez wszystkie etapy transakcji.     5. Dostosowane podejście: Zrozumienie indywidualnych potrzeb każdego klienta jest kluczowe dla naszej pracy. Dlatego dostosowujemy nasze działania do Twoich oczekiwań, gwarantując kompleksowe wsparcie na każdym etapie procesu zakupu. Jeśli poszukujesz zaufanego partnera, który pomoże Ci w znalezieniu wymarzonej nieruchomości i przejściu przez proces zakupu z pełnym profesjonalizmem, skontaktuj się z nami już dziś. Jesteśmy gotowi, by być Twoim wsparciem na drodze do posiadania idealnego domu lub mieszkania!',
+        textEN: "We invite you to take advantage of our professional brokerage in the real estate purchase process, which is based on in-depth market knowledge and the full commitment of our team. Our company offers comprehensive support and advice to ensure that you have a successful transaction of buying the perfect property. Expert knowledge and support: our experienced agents have deep knowledge of the local real estate market. Our commitment and expertise allows us to effectively advise you on the ideal property to suit your preferences and needs. Property Search: We actively search for properties that meet your expectations. With our resources and network of contacts, we find proposals that match your requirements. Analysis and negotiation: We help you with a thorough market analysis, property valuation and negotiate on your behalf, making sure you get the best terms for your purchase. Legal assistance and paperwork: We provide legal support and assist with the formalities of the purchase process, ensuring a smooth and seamless transition through all stages of the transaction.     5. Personalized approach: Understanding the individual needs of each client is central to our work. That's why we tailor our activities to your expectations, guaranteeing comprehensive support at every stage of the buying process. If you are looking for a trusted partner to help you find your dream property and go through the buying process with complete professionalism, contact us today. We are ready to be your support on the road to owning the perfect house or apartment!",
         id: 3,
         stepsPL: [
             {
@@ -259,33 +259,28 @@ const offersData = [
             },
             {
                 id: 5,
-                title: 'Materiały marketingowe:',
-                text: 'Dostarcz agentowi niezbędne informacje potrzebne do przygotowania oferty, która pomoże odpowiedzieć na pytania potencjalnych sprzedawców.',
-            },
-            {
-                id: 6,
-                title: 'Ekspozycja oferty:',
-                text: 'Agent zadba o opublikowanie oferty zakupu nieruchomości w odpowiednich kanałach, aby przyciągnąć sprzedawców.',
-            },
-            {
-                id: 7,
                 title: 'Prezentacje nieruchomości:',
                 text: 'Agent zorganizuje prezentacje nieruchomości, umożliwiając Ci zapoznanie się z potencjalnymi zakupami.',
             },
             {
-                id: 8,
+                id: 6,
                 title: 'Oferta i negocjacje:',
                 text: 'Gdy znajdziesz nieruchomość, która Cię interesuje, agent pomoże w przedstawieniu oferty i negocjacjach z właścicielem nieruchomości.',
             },
             {
-                id: 9,
+                id: 7,
                 title: 'Umowa zakupu:',
                 text: 'Po zaakceptowaniu oferty, agent przeprowadzi Cię przez proces sporządzenia umowy zakupu nieruchomości u notariusza lub odpowiedniego organu.',
             },
             {
-                id: 10,
+                id: 8,
                 title: 'Przekazanie nieruchomości:',
                 text: 'Proces zakupu zakończy się podpisaniem umowy notarialnej, przekazaniem środków i zarejestrowaniem Ciebie jako nowego właściciela nieruchomości.',
+            },
+            {
+                id: 9,
+                title: 'Obsługa po zakupowa:',
+                text: 'Po udanym zakupie agent pomoże ci we wszystkich formalnościach po zakupowych. Takich jak zgłoszenie się do podatku, ubezpieczenie nieruchomości, przepisanie liczników oraz wszystkich pozostałych formalności związanych z twoja nieruchomością.',
             },
         ],
         stepsEN: [
@@ -311,58 +306,195 @@ const offersData = [
             },
             {
                 id: 5,
-                title: 'Marketing Materials:',
-                text: "Provide the agent with the necessary information required to prepare an offer that will help answer potential sellers' questions.",
-            },
-            {
-                id: 6,
-                title: 'Listing the Offer:',
-                text: 'The agent will ensure the listing of the property purchase offer on suitable channels to attract sellers.',
-            },
-            {
-                id: 7,
                 title: 'Property Presentations:',
                 text: 'The agent will organize property presentations, allowing you to explore potential purchases.',
             },
             {
-                id: 8,
+                id: 6,
                 title: 'Offer and Negotiations:',
                 text: 'When you find a property that interests you, the agent will assist in presenting the offer and negotiations with the property owner.',
             },
             {
-                id: 9,
+                id: 7,
                 title: 'Purchase Agreement:',
                 text: 'After accepting the offer, the agent will guide you through the process of preparing a property purchase agreement with a notary or the appropriate authority.',
             },
             {
-                id: 10,
+                id: 8,
                 title: 'Property Handover:',
                 text: 'The purchase process will conclude with the signing of a notarial agreement, the transfer of funds, and the registration of you as the new property owner.',
             },
+            {
+                id: 9,
+                title: 'Post-purchase service:',
+                text: 'After a successful purchase, the agent will help you with all post-purchase formalities. Such as filing taxes, insuring the property, prescribing the meters and all other formalities related to your property.',
+            },
         ],
-        img: './img/zakup.png',
+        img: './img/aaa_slider_1.png',
     },
     {
-        titlePL: 'Posrednictwo najmu',
-        titleEN: 'Rental Mediation',
-        textPL: 'Posrednictwo najmu - usluga polega na zleceniu poszukiwania nieruchomości pod wynajem naszym brokerom. Miesci w sobie analizowanie rynku pod kątem kryteriow klienta, poszukiwaniu kliku najbardziej korzystnych opcji, prezentacji wybranych nieruchomości, sprawdzenie/przygotowanie umowy najmu tak aby byla wygodna dla obu stron, negocjacje waronkow oraz ceny, przekazanie mieszkania na podstawie protokolu zdawczo- odbiorczego wraz z wykonaniem sesji zdjęciowej. W razie potrzeby wsparcie w tlumaczemiu dokumentow, przeprowadzce, zrobienia najmu okazjonalnego/isnstytucjonalnego. jestesmy dyspozycyjni o kazdej porze dnia i nocy w razie konieczności wsparcia naszych klientów. Koszty prowizji za wykonane czynności ustalają się indywidualnie. Po więcej szczególow prosimy o kontakt z naszym doradcą.',
-        textEN: "Rental Mediation - the service involves commissioning our brokers to search for rental properties. It encompasses market analysis based on the client's criteria, seeking multiple advantageous options, presenting selected properties, checking/preparing the lease agreement for the convenience of both parties, negotiating terms and prices, handing over the property based on the handover protocol along with conducting a photo session. If necessary, we offer support in document translation, moving, arranging occasional/institutional leases. We are available at any time of day and night to assist our clients as needed. Commission fees for performed tasks are determined individually. For more details, please contact our advisor.",
+        titlePL: 'Pośrednictwo najmu',
+        titleEN: 'rent Brokerage',
+        textPL: 'Zapraszamy do skorzystania z naszego profesjonalnego pośrednictwa w wynajmie nieruchomości, które opiera się na szerokim doświadczeniu i zaangażowaniu naszego zespołu. Nasza firma oferuje kompleksową pomoc w znalezieniu odpowiednich najemców dla Twojej nieruchomości. Zasięg i marketing: Wykorzystujemy różnorodne narzędzia marketingowe oraz sieci kontaktów, aby dotrzeć do potencjalnych najemców i promować Twoją nieruchomość w sposób skuteczny i atrakcyjny. Selekcja najemców: Przeprowadzamy staranną selekcję potencjalnych najemców, dbając o to, by znaleźć osoby dopasowane do Twoich oczekiwań i standardów. Prezentacje: Organizujemy profesjonalne prezentacje, aby potencjalni najemcy mogli poznać nieruchomość i jej atuty. Proces wynajmu: Pomagamy w negocjacjach warunków najmu oraz zapewniamy wsparcie w procesie zawierania umowy najmu, dbając o zabezpieczenie Twoich interesów. Monitorowanie i wsparcie: Po wynajęciu nieruchomości, świadczymy wsparcie w monitorowaniu umowy najmu oraz reagujemy na ewentualne potrzeby zarówno wynajmującego, jak i najemcy. Jeśli poszukujesz rzetelnego partnera, który pomoże Ci znaleźć odpowiednich najemców dla Twojej nieruchomości i zadba o płynny proces wynajmu, skontaktuj się z nami już dziś. Jesteśmy gotowi, by być Twoim wsparciem na drodze do udanej transakcji wynajmu nieruchomości!',
+        textEN: 'We invite you to use our professional real estate rental brokerage, which is based on the extensive experience and commitment of our team. Our company offers comprehensive assistance in finding suitable tenants for your property. Outreach and marketing: We use a variety of marketing tools and networks to reach potential tenants and promote your property in an effective and attractive way. Tenant selection: We conduct a careful selection of potential tenants, making sure to find people who match your expectations and standards. Presentations: We organize professional presentations so that potential tenants can familiarize themselves with the property and its assets. Rental process: We help negotiate the terms of the lease and provide support in the process of concluding the lease agreement, taking care to safeguard your interests.     5. Monitoring and support: Once the property is rented, we provide support in monitoring the lease agreement and respond to any needs of both the landlord and the tenant. If you are looking for a reliable partner to help you find the right tenants for your property and take care of a smooth rental process, contact us today. We are ready to be your support on the road to a successful property rental transaction!',
         id: 4,
         stepsPL: [
             {
                 id: 1,
                 title: 'Kontakt z biurem nieruchomości:',
-                text: 'Skontaktuj się z biurem nieruchomości, aby zgłosić swoje zainteresowanie wynajmem nieruchomości. Zostanie Ci przydzielony agent prowadzący, który będzie Twoim głównym kontaktem.',
+                text: 'Skontaktuj się z biurem nieruchomości, aby zgłosić swoje zainteresowanie wynajmem nieruchomości. Twoje zapytanie zostanie przydzielone agentowi prowadzącemu.',
+            },
+            {
+                id: 2,
+                title: 'Wstępna konsultacja:',
+                text: 'Agent prowadzący przeprowadzi wstępną konsultację, aby poznać Twoje wymagania dotyczące wynajmu nieruchomości. Omówicie kwestie takie jak metody wynajmu, warunki umowy, oczekiwana cena wynajmu, preferencje wobec najemcy itp.',
+            },
+            {
+                id: 3,
+                title: 'Wycena najmu:',
+                text: 'Twój agent dokona wyceny nieruchomości, biorąc pod uwagę lokalny rynek i unikalne cechy Twojej nieruchomości. Zaproponuje Ci odpowiednią cenę wynajmu.',
+            },
+            {
+                id: 4,
+                title: 'Dokumentacja prawna:',
+                text: 'Sprawdzimy stan prawny nieruchomości i potwierdzimy, że jest zgodny z wymogami. Potem podpiszemy umowę pośrednictwa, która określa warunki współpracy z biurem nieruchomości.',
+            },
+            {
+                id: 5,
+                title: 'Przygotowanie materiałów marketingowych:',
+                text: 'Dostarcz agentowi informacje i dokumentację potrzebną do przygotowania oferty wynajmu, w tym zdjęcia i opis nieruchomości.',
+            },
+            {
+                id: 6,
+                title: 'Ekspozycja oferty:',
+                text: 'Biuro nieruchomości opublikuje ofertę wynajmu w różnych kanałach, aby dotrzeć do potencjalnych najemców.',
+            },
+            {
+                id: 7,
+                title: 'Prezentacje nieruchomości:',
+                text: 'Agent będzie organizować prezentacje nieruchomości zainteresowanym najemcom, pozwalając im poznać nieruchomość.',
+            },
+            {
+                id: 8,
+                title: 'Oferty i negocjacje:',
+                text: 'Po otrzymaniu ofert od potencjalnych najemców, agent przekaże Ci warunki oferty wynajmu, w tym cenę i inne szczegóły. Możesz negocjować warunki z potencjalnymi najemcami.',
+            },
+            {
+                id: 9,
+                title: 'Umowa najmu:',
+                text: 'Gdy zaakceptujesz ofertę najmu, biuro nieruchomości pomoże w sporządzeniu umowy najmu, która określa warunki wynajmu, takie jak cena, okres najmu, zasady płatności itp.',
+            },
+            {
+                id: 10,
+                title: 'Przekazanie nieruchomości najemcy:',
+                text: 'Po podpisaniu umowy najmu, biuro nieruchomości pomoże w przekazaniu nieruchomości nowemu najemcy, zbierze pierwszy czynsz i zajmie się formalnościami rejestracyjnymi.',
+            },
+            {
+                id: 11,
+                title: 'Wsparcie w trakcie najmu:',
+                text: 'Biuro nieruchomości może nadal służyć wsparciem w trakcie trwania najmu, rozwiązując ewentualne problemy lub pytania związane z nieruchomością.',
+            },
+            {
+                id: 12,
+                title: 'Zakończenie najmu:',
+                text: 'Po zakończeniu okresu najmu, agent może pomóc w procedurze zakończenia najmu i zwolnieniu nieruchomości.',
+            },
+            {
+                id: 13,
+                title: 'Powtarzający się proces:',
+                text: 'W razie potrzeby, agent będzie nadal dostarczać Ci propozycje wynajmu i pomagać w procesie znalezienia kolejnej nieruchomości na wynajem.',
+            },
+        ],
+        stepsEN: [
+            {
+                id: 1,
+                title: 'Contact our real estate office:',
+                text: 'Contact a real estate office to submit your interest in renting a property. Your inquiry will be assigned to a lead agent.',
+            },
+            {
+                id: 2,
+                title: 'Initial consultation:',
+                text: 'The lead agent will hold an initial consultation to learn about your rental property requirements. You will discuss issues such as rental methods, contract terms, expected rental price, tenant preferences, etc.',
+            },
+            {
+                id: 3,
+                title: 'Rental Valuation:',
+                text: 'Your agent will make a valuation of the property, taking into account the local market and the unique features of your property. He will offer you a suitable rental price.',
+            },
+            {
+                id: 4,
+                title: 'Legal documentation:',
+                text: "We will make sure that the legal status of the property is compliant. Then we'll sign a brokerage agreement, which sets out the terms of cooperation with the real estate agency.",
+            },
+            {
+                id: 5,
+                title: 'Preparation of marketing materials:',
+                text: 'Provide the agent with the information and documentation needed to prepare the rental offer, including photos and a description of the property.',
+            },
+            {
+                id: 6,
+                title: 'Offer visibility:',
+                text: 'The real estate agency will publish the rental offer in various channels to reach potential tenants',
+            },
+            {
+                id: 7,
+                title: 'Property presentations:',
+                text: 'The agent will arrange property presentations to interested tenants, allowing them to get to know the property.',
+            },
+            {
+                id: 8,
+                title: 'Offers and negotiations:',
+                text: 'After receiving offers from potential tenants, the agent will communicate to you the conditions of the rental offer, including the price and other details. You can negotiate terms with potential tenants.',
+            },
+            {
+                id: 9,
+                title: 'Rental agreement:',
+                text: 'Once you accept a rental offer, the real estate agency will help draw up a rental agreement that specifies the terms of the rental, such as price, rental period, payment terms, etc.',
+            },
+            {
+                id: 10,
+                title: 'Transfer of the property to the tenant:',
+                text: 'Once the lease agreement is signed, the real estate agency will help hand over the property to the new tenant, collect the first rent and handle the registration formalities.',
+            },
+            {
+                id: 11,
+                title: 'Support during the lease:',
+                text: '     The real estate agency can continue to provide support during the lease, resolving any problems or questions about the property.',
+            },
+            {
+                id: 12,
+                title: 'Ending the Rental Agreement:',
+                text: 'After the rental period concludes, the agent can assist with the rental termination procedure and property vacating.',
+            },
+            {
+                id: 13,
+                title: 'Recurring Process:',
+                text: 'If needed, the agent will continue to provide rental proposals and assist in finding your next rental property.',
+            },
+        ],
+        img: './img/aaa_slider_2.png',
+    },
+    {
+        titlePL: 'Pośrednictwo wynajmu',
+        titleEN: 'lease brokerage',
+        textPL: 'Zapraszamy do skorzystania z naszego profesjonalnego pośrednictwa w poszukiwaniu idealnego lokalu pod wynajem. Nasza firma oferuje kompleksową pomoc w znalezieniu nieruchomości dostosowanej do Twoich potrzeb i oczekiwań. Analiza potrzeb: Rozpoczynamy od dogłębnego zrozumienia Twoich potrzeb, oczekiwań oraz warunków, które są dla Ciebie istotne w poszukiwanej nieruchomości pod wynajem. Poszukiwanie lokali: Aktywnie przeszukujemy rynek, aby znaleźć lokale odpowiadające Twoim kryteriom. Dzięki naszym zasobom i sieci kontaktów, prezentujemy propozycje dostosowane do Twoich preferencji. Wizytacje i prezentacje: Organizujemy wizytacje wybranych lokali, abyś mógł/mogła poznać potencjalne miejsce wynajmu i ocenić jego atuty. Negocjacje i pomoc w zawarciu umowy: Pomagamy w negocjacjach warunków najmu oraz zapewniamy wsparcie w procesie zawierania umowy, dbając o to, aby spełniała ona Twoje oczekiwania.     5. Wsparcie na każdym etapie: Nasi agenci służą Ci wsparciem przez cały proces poszukiwania, udzielając odpowiedzi na pytania i pomagając w podjęciu decyzji. Jeśli szukasz zaufanego partnera, który pomoże Ci znaleźć idealny lokal pod wynajem zgodny z Twoimi oczekiwaniami, skontaktuj się z nami już dziś. Jesteśmy gotowi, by być Twoim wsparciem w znalezieniu nieruchomości, która spełni Twoje potrzeby!',
+        textEN: 'You are welcome to use our professional brokerage in your search for the perfect rental property. Our company offers comprehensive assistance in finding a property tailored to your needs and expectations. Analysis of needs: We start with an in-depth understanding of your needs, expectations and the conditions that are important to you in the rental property you are looking for. Property Search: We actively search the market to find properties that match your criteria. With our resources and network of contacts, we present proposals tailored to your preferences. Viewings and presentations: We organize visits to selected units so that you can get to know a potential rental location and evaluate its strengths. Negotiations and contract assistance: We help you negotiate the terms of the lease and provide support in the contracting process, ensuring that it meets your expectations. Support at every stage: Our agents support you through the entire search process, answering your questions and helping you make a decision. If you are looking for a trusted partner to help you find the perfect rental property that meets your needs, contact us today. We are ready to be your support in finding a property that meets your needs!',
+        id: 5,
+        stepsPL: [
+            {
+                id: 1,
+                title: 'Kontakt z biurem nieruchomości:',
+                text: 'Skontaktuj się z biurem nieruchomości, aby zgłosić swoje zainteresowanie najmem nieruchomości. Zostanie Ci przydzielony agent prowadzący, który będzie Twoim głównym kontaktem.',
             },
             {
                 id: 2,
                 title: 'Konsultacja i poznanie wymagań:',
-                text: 'Agent prowadzący przeprowadzi konsultację, aby zrozumieć Twoje wymagania i preferencje dotyczące wynajmu nieruchomości.',
+                text: 'Agent prowadzący przeprowadzi konsultację, aby zrozumieć Twoje wymagania i preferencje dotyczące wynajmu nieruchomości. Omówicie kwestie takie jak rodzaj nieruchomości, lokalizacja, oczekiwana cena wynajmu itp.',
             },
             {
                 id: 3,
                 title: 'Wyszukiwanie odpowiednich ofert:',
-                text: 'Twój agent będzie regularnie dostarczać Ci propozycje wynajmu nieruchomości, które spełniają Twoje kryteria.',
+                text: 'Twój agent będzie regularnie dostarczać Ci oferty nieruchomości, które spełniają Twoje kryteria.',
             },
             {
                 id: 4,
@@ -415,181 +547,74 @@ const offersData = [
                 text: 'W razie potrzeby, agent będzie nadal dostarczać Ci propozycje wynajmu i pomagać w procesie znalezienia kolejnej nieruchomości na wynajem.',
             },
         ],
-        stepsENWynajem: [
+        stepsEN: [
             {
                 id: 1,
-                title: 'Contacting the Real Estate Agency:',
-                text: 'Get in touch with a real estate agency to express your interest in renting a property. You will be assigned a designated agent as your main point of contact.',
+                title: 'Contact the real estate office:',
+                text: 'Contact the real estate office to register your interest in leasing the property. You will be assigned a lead agent who will be your main contact.',
             },
             {
                 id: 2,
-                title: 'Consultation and Understanding Requirements:',
-                text: 'The leading agent will conduct a consultation to understand your requirements and preferences for property rental.',
+                title: 'Consultation and learning about your requirements:',
+                text: 'The lead agent will conduct a consultation to understand your requirements and preferences for renting the property. You will discuss issues such as property type, location, expected rental price, etc.',
             },
             {
                 id: 3,
-                title: 'Searching for Suitable Offers:',
-                text: 'Your agent will regularly provide you with rental property proposals that meet your criteria.',
+                title: 'Searching for suitable properties:',
+                text: 'Your agent will regularly provide you with property listings that meet your criteria.',
             },
             {
                 id: 4,
-                title: 'Evaluating Proposals and On-Site Visits:',
-                text: "Together with the agent, you'll evaluate rental proposals and decide which properties are worth visiting in person.",
+                title: 'Evaluating proposals and property visits:',
+                text: 'Together with your agent, you evaluate rental proposals and decide which properties are worth visiting in person.',
             },
             {
                 id: 5,
                 title: 'Property Presentations:',
-                text: 'The agent arranges on-site visits for you to explore the properties that interest you.',
+                text: 'The agent arranges property viewings so you can see the properties you are interested in.',
             },
             {
                 id: 6,
-                title: 'Negotiating Rental Terms:',
-                text: 'Once you find a property you wish to rent, the agent will assist in negotiating rental terms such as rent amount, lease duration, etc.',
+                title: 'Contract negotiations:',
+                text: 'When you find a property you want to rent, the agent will help negotiate the terms of the lease, such as rent price, lease term, etc.',
             },
             {
                 id: 7,
-                title: 'Preparing Rental Documents:',
-                text: 'After agreeing on the terms, the agent will help in preparing the rental agreement and other necessary documents for signing.',
+                title: 'Preparation of lease documents:',
+                text: 'Once the terms are agreed upon, the agent will help prepare the lease agreement and other documents necessary for signing the contract.',
             },
             {
                 id: 8,
-                title: 'Signing the Rental Agreement:',
-                text: 'Upon accepting the terms, you sign the rental agreement for the property.',
+                title: 'Signing the lease agreement:',
+                text: 'After accepting the terms and conditions, you sign the lease agreement for the property.',
             },
             {
                 id: 9,
-                title: 'Payment of Deposit and First Rent:',
-                text: 'You are required to pay the deposit and the first rent according to the rental agreement.',
+                title: 'Payment of deposit and first rent:',
+                text: 'You are required to pay a deposit and the first rent in accordance with the lease agreement.',
             },
             {
                 id: 10,
-                title: 'Property Handover:',
-                text: "The agent coordinates the property handover, including key handover and checking the property's condition.",
+                title: 'Handover of the property:',
+                text: 'The agent will coordinate the handover of the property, including receiving the keys and checking the condition of the property.',
             },
             {
                 id: 11,
-                title: 'Support During the Rental Period:',
-                text: "Throughout the rental period, you can rely on the agent's support for any property-related questions or issues.",
+                title: 'Support during the rental period:',
+                text: "During the rental period, you can rely on the agent's support for any questions or problems with the property.",
             },
             {
                 id: 12,
-                title: 'Ending the Rental Agreement:',
-                text: 'After the rental period concludes, the agent can assist with the rental termination procedure and property vacating.',
+                title: 'Lease termination:',
+                text: 'At the end of the lease term, the agent can help you with the procedure for ending the lease and releasing the property.',
             },
             {
                 id: 13,
-                title: 'Recurring Process:',
-                text: 'If needed, the agent will continue to provide rental proposals and assist in finding your next rental property.',
+                title: 'Repeated process:',
+                text: 'If necessary, the agent will continue to provide you with rental proposals and assist you in the process of finding your next rental property.',
             },
         ],
-        img: './img/najem.png',
-    },
-    {
-        titlePL: 'Pośrednictwo wynajmu',
-        titleEN: 'Rental (Leasy) Mediation',
-        textPL: 'Pośrednictwo wynajmu - usluga polega na zmaksymalizowaniu zysku z wynajmu mieszkania. Proces zaczyna się od home stagingu w mieszkaniu w celu zrobienia jakościowej sesji zdjęciowej tak aby mieszkanie odworzylo swoj maksymalny potencjal, po sesji zdjeciowej nasz dzial marketingu zaczyna wystawienie oraz promowanie na wszystkich niezbędnych portalach. Od konkurencji róznimy się tym ze idziemy w noge z czasem i nasza praca z ofertą nie kończy się na wystawieniu oferty na portalach OLX i Otodom, mimo tego nasze oferty tez znajdą się na Instagramie Faceboku oraz Telegramie. Są to bardziej popularne platformy wsród mlodych ludzi. Po wystawieniu oferty zaczynamy poszukiwanie potencjalnego najemcy. Dzięki naszemu bogatemu dośziadczeniu oraz narzędziom do trafnej weryfikacji potencjalnych robimy to w taki sposób zeby zminimalizowac ryzyko niezaplaconego czynszu. Weryfikujemy najemce pod względem finansowym oraz dostosowujemy warunki wynajmu do kazdej konkretnej sytuacji. Po znaleznieniu najemcy pszekazujemy mieszkanie na podstawie protokolu zdawczo-odbiorczego wraz z sesja zdjeciową. Protokol ten zostawiamy w naszym archiwum na wypadek jak by która kolwiek ze stron nie miala by go przy oddaniu mieszkania.',
-        textEN: "Rental Mediation - the service aims to maximize the profit from apartment rentals. The process begins with home staging in the apartment to create a high-quality photo session to showcase the property's full potential. After the photo session, our marketing department starts listing and promoting the property on all necessary platforms. What sets us apart from the competition is our responsiveness. Our work doesn't end with posting listings on platforms like OLX and Otodom; we also feature our listings on more popular platforms among younger people, such as Instagram, Facebook, and Telegram. After listing the property, we start searching for potential tenants. Thanks to our extensive experience and tools for accurate tenant screening, we minimize the risk of unpaid rent. We assess tenants' financial stability and tailor the rental terms to each specific situation. Once a tenant is found, we hand over the apartment based on a handover protocol along with a photo session. We keep this protocol in our archives in case either party needs it upon handing over the apartment.",
-        id: 5,
-        stepsPL: [
-            {
-                id: 1,
-                title: 'Kontakt z biurem nieruchomości:',
-                text: 'Skontaktuj się z biurem nieruchomości, aby zgłosić swoje zainteresowanie wynajmem nieruchomości. Twoje zapytanie zostanie przydzielone agentowi prowadzącemu.',
-            },
-            {
-                id: 2,
-                title: 'Wstępna konsultacja:',
-                text: 'Agent prowadzący przeprowadzi wstępną konsultację, aby poznać Twoje wymagania dotyczące wynajmu nieruchomości. Omówicie kwestie takie jak rodzaj nieruchomości, lokalizacja, oczekiwana cena wynajmu itp.',
-            },
-            {
-                id: 3,
-                title: 'Wycena najmu:',
-                text: 'Twój agent dokona wyceny nieruchomości, biorąc pod uwagę lokalny rynek i unikalne cechy Twojej nieruchomości. Zaproponuje Ci odpowiednią cenę wynajmu.',
-            },
-            {
-                id: 4,
-                title: 'Dokumentacja prawna:',
-                text: 'Upewnij się, że stan prawny nieruchomości jest zgodny z wymogami. Podpisz umowę pośrednictwa, która określa warunki współpracy z biurem nieruchomości.',
-            },
-            {
-                id: 5,
-                title: 'Przygotowanie materiałów marketingowych:',
-                text: 'Dostarcz agentowi informacje i dokumentację potrzebną do przygotowania oferty wynajmu, w tym zdjęcia i opis nieruchomości.',
-            },
-            {
-                id: 6,
-                title: 'Ekspozycja oferty:',
-                text: 'Biuro nieruchomości opublikuje ofertę wynajmu w różnych kanałach, aby dotrzeć do potencjalnych najemców.',
-            },
-            {
-                id: 7,
-                title: 'Prezentacje nieruchomości:',
-                text: 'Agent będzie organizować prezentacje nieruchomości zainteresowanym najemcom, pozwalając im poznać nieruchomość.',
-            },
-            {
-                id: 8,
-                title: 'Oferty i negocjacje:',
-                text: 'Po otrzymaniu ofert od potencjalnych najemców, agent przekaże Ci warunki oferty wynajmu, w tym cenę i inne szczegóły. Możesz negocjować warunki z potencjalnymi najemcami.',
-            },
-            {
-                id: 9,
-                title: 'Umowa najmu:',
-                text: 'Gdy zaakceptujesz ofertę najmu, biuro nieruchomości pomoże w sporządzeniu umowy najmu, która określa warunki wynajmu, takie jak cena, okres najmu, zasady płatności itp.',
-            },
-            {
-                id: 10,
-                title: 'Przekazanie nieruchomości najemcy:',
-                text: 'Po podpisaniu umowy najmu, biuro nieruchomości pomoże w przekazaniu nieruchomości nowemu najemcy, zbierze pierwszy czynsz i zajmie się formalnościami rejestracyjnymi.',
-            },
-            {
-                id: 11,
-                title: 'Wsparcie w trakcie najmu:',
-                text: 'Biuro nieruchomości może nadal służyć wsparciem w trakcie trwania najmu, rozwiązując ewentualne problemy lub pytania związane z nieruchomością.',
-            },
-        ],
-        stepsEN: [
-            {
-                id: 1,
-                title: 'Signing the Agreement:',
-                text: 'Signing a lease agreement is the first step in formalizing the property rental process. The agreement specifies the rights and obligations of both the tenant and the landlord. Our experienced team of lawyers ensures that the contract is clear, compliant with current regulations, and protects the interests of both parties.',
-            },
-            {
-                id: 2,
-                title: 'Property Handover:',
-                text: 'Our property handover process is thorough and careful. We ensure that the property is in excellent condition before handing it over to the tenant. All necessary formalities and documents are discussed, and the keys are handed over with due diligence.',
-            },
-            {
-                id: 3,
-                title: 'Property Enhancement:',
-                text: 'We ensure that the property meets the highest quality standards. As needed and agreed, we enhance the property to provide comfort and convenience for the tenant.',
-            },
-            {
-                id: 4,
-                title: 'Photo Session:',
-                text: 'To promote the property, we conduct a professional photo session. Our team of photographers and stylists ensures that the property is presented in the best light, increasing its attractiveness.',
-            },
-            {
-                id: 5,
-                title: 'Preparing the Offer:',
-                text: 'Every rental offer is carefully prepared. All details regarding the property, including information about location, square footage, amenities, and prices, are thoroughly documented to facilitate decision-making for potential tenants.',
-            },
-            {
-                id: 6,
-                title: 'Listing the Offer:',
-                text: 'Our offers are listed on various platforms to reach as many interested tenants as possible. We collaborate with reputable real estate services and utilize our website to maximize offer visibility.',
-            },
-            {
-                id: 7,
-                title: 'Marketing Actions:',
-                text: 'Our marketing team undertakes a wide range of actions to promote the property. Advertising campaigns, social media, and other marketing strategies are used to attract the attention of potential tenants.',
-            },
-            {
-                id: 8,
-                title: 'Take Profit:',
-                text: 'Our goal is to ensure the profitability of investments for our clients. We operate in a way that allows for maximizing rental property profits, meeting client expectations.',
-            },
-        ],
-        img: './img/wynajem.png',
+        img: './img/aaa_slider_3.png',
     },
 ]
 
@@ -649,7 +674,7 @@ const Offers = () => {
                     <div className={c.body__steps_title}>
                         {data === 'pl'
                             ? 'Jak to wygląda?'
-                            : 'What is looks like?'}
+                            : 'What it looks like?'}
                     </div>
                     <Steps
                         readMore={readMore}

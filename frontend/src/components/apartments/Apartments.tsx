@@ -7,68 +7,73 @@ import Reviews from '../reviews/Reviews'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import { useNavigate } from 'react-router-dom'
-import { APARTMENTS_ROUTE, BLOG_ROUTE } from '../../variables/variables'
+import { APARTMENTS_ROUTE } from '../../variables/variables'
+import ApartmentsCard from './ApartmentsCard'
+import PagesTop from '../pagesTop/PagesTop'
+
+export interface Apartments {
+    success: boolean
+    count: number
+    data: {
+        id: number
+        number: string
+        number_export: string
+        status: number
+        update_date: string
+    }[]
+}
 
 export interface Apartment {
     id: number
-    namePL: string
-    nameEN: string
     price: string
-    images: string
-    citiesId: number
-    typeId: number
-    appointmentId: number
-    map: string
-    descriptionPL: string
-    descriptionEN: string
-    square: string
-    rooms: string
-    floor: string
-    czynsz: string
-    stan: string
-    balkon: string
-    parking: string
-    heating: string
-    address: string
+    priceCurrency: number
+    pricePermeter: string
+    areaTotal: string
+    portalTitle: string
+    contactFirstname: string
+    contactLastname: string
+    contactPhone: string
+    contactEmail: string
+    typeName: string
+    locationCityName: string
+    locationStreetName: string
+    descriptionPrefix: string
+    descriptionWebsite: string
+    pictures: string[]
+    apartmentFloor: string
+    apartmentRoomNumber: string
+    apartmentDeposit: string
+    additionalParkingunderground: string
+    additionalGarage: string
+    additionalLoggia: string
+    additionalBalcony: string
+    additionalTerrace: string
+    additionalParking: string
+    buildingHeating: string
+    buildingFloornumber: string
+    buildingYear: string
+    buildingType: string
+    availableDate: string
+    videoLink: string
+    apartmentRent: string
+    locationPostal: string
 }
 
+export const apiClient = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+})
+
 const Apartments = () => {
-    const [apartments, setApartments] = useState<Apartment[] | null>(null)
+    const [apartments, setApartments] = useState<Apartments | null>(null)
     const { data } = useMyContext()
-    const nav = useNavigate()
-
-    function getStringBeforeComma(inputString: string) {
-        const commaIndex = inputString.indexOf(',')
-
-        if (commaIndex !== -1) {
-            return inputString.substring(0, commaIndex)
-        }
-
-        // Якщо кома не знайдена, повертаємо весь рядок
-        return inputString
-    }
 
     // fetch data
-    const fetchData = async (
-        appointmentId?: number,
-        typeId?: number,
-        citiesId?: number
-    ) => {
-        try {
-            let url = process.env.REACT_APP_API_URL + 'api/apartments'
 
-            if (appointmentId !== undefined) {
-                url += `?appointmentId=${appointmentId}`
-            }
-            if (typeId !== undefined) {
-                url += `${url.includes('?') ? '&' : '?'}typeId=${typeId}`
-            }
-            if (citiesId !== undefined) {
-                url += `${url.includes('?') ? '&' : '?'}citiesId=${citiesId}`
-            }
-            console.log(url)
-            const response = await axios.get(url)
-            console.log(response.data)
+    const fetchData = async () => {
+        try {
+            const response = await apiClient.get(
+                '/proxy/offer/basic-list?company=15968&token=f6fb0d91ae&status=3,99'
+            )
             setApartments(response.data)
         } catch (error) {
             console.error('Error fetching data:', error)
@@ -77,62 +82,18 @@ const Apartments = () => {
     }
 
     useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         fetchData()
     }, [false])
     return (
         <div className={c.apartments}>
-            <ApartmentsTop
-                fetchData={fetchData}
-                title={data === 'pl' ? 'Mieszkania' : 'Apartments'}
-            />
+            <PagesTop title="" />
             <div className={c.container}>
                 {apartments ? (
                     <div className={c.items}>
-                        {apartments.length != 0 ? (
-                            apartments.map((item) => (
-                                <div
-                                    onClick={() =>
-                                        nav(
-                                            '/' +
-                                                APARTMENTS_ROUTE +
-                                                '/' +
-                                                item.id
-                                        )
-                                    }
-                                    className={c.item}
-                                >
-                                    <div
-                                        style={{
-                                            backgroundImage: `url(${
-                                                process.env.REACT_APP_API_URL +
-                                                '/' +
-                                                getStringBeforeComma(
-                                                    item.images
-                                                )
-                                            })`,
-                                        }}
-                                        className={c.item__img}
-                                    ></div>
-                                    <h4 className={c.item__title}>
-                                        {data === 'pl'
-                                            ? item.namePL
-                                            : item.nameEN}
-                                    </h4>
-                                    <p className={c.item__address}>
-                                        {item.address}
-                                    </p>
-                                    <div className={c.item__info}>
-                                        <p className={c.item__price}>
-                                            {item.price}
-                                        </p>
-                                        <p className={c.item__rooms}>
-                                            {item.rooms}
-                                        </p>
-                                        <p className={c.item__square}>
-                                            {item.square}
-                                        </p>
-                                    </div>
-                                </div>
+                        {apartments.data.length != 0 ? (
+                            apartments.data.map((item) => (
+                                <ApartmentsCard key={item.id} id={item.id} />
                             ))
                         ) : (
                             <p className={c.error}>

@@ -53,14 +53,30 @@ const deletePostById = async (req, res) => {
     const postId = req.params.id
 
     try {
-        const deletedPost = await Post.destroy({
-            where: {
-                id: postId,
-            },
-        })
+        const post = await Post.findByPk(postId)
 
-        if (!deletedPost) {
+        if (!post) {
             return res.status(404).json({ error: 'Post not found' })
+        }
+
+        // Отримуємо ім'я файлу фото для видалення
+        const imageName = post.img
+
+        // Видаляємо пост з бази даних
+        await post.destroy()
+
+        // Видаляємо файл фото з сервера
+        if (imageName) {
+            const fs = require('fs')
+            const path = require('path')
+
+            const staticFolderPath = path.join(__dirname, 'static')
+            const imagePath = path.join(staticFolderPath, imageName.trim())
+
+            // Перевіряємо, чи файл існує перед видаленням
+            if (fs.existsSync(imagePath)) {
+                fs.unlinkSync(imagePath)
+            }
         }
 
         res.json({ message: 'Post deleted successfully' })

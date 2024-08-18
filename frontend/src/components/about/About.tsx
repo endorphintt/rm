@@ -5,6 +5,7 @@ import Footer from '../footer/Footer'
 import PagesTop from '../pagesTop/PagesTop'
 import Reviews from '../reviews/Reviews'
 import c from './About.module.scss'
+import Employees from './employees/Employees'
 
 const About = () => {
     const { data } = useMyContext()
@@ -28,7 +29,7 @@ const About = () => {
                 </div>
                 <img
                     className={c.main__img}
-                    src="./img/about.png"
+                    src="./img/aaa_about_1.png"
                     alt="realy management"
                 />
             </div>
@@ -44,6 +45,7 @@ const About = () => {
                         : 'Our success is based on the effectiveness and trust of our clients. We don\'t just manage properties - we create opportunities. Our philosophy of "Unlocking properties potential" is the main source of our motivation to help clients achieve greater profits and success in the real estate market. If you are looking for a partner who will understand your goals and help you achieve them in the world of real estate, then Realsy Management is here to support you. Contact us today and let us help you unlock the potential of your properties.'}
                 </p>
             </article>
+            <Employees />
             <Reviews />
             <Contact />
             <Footer />

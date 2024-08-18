@@ -25,6 +25,7 @@ const Blog = () => {
     const nav = useNavigate()
 
     useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         const fetchData = async () => {
             try {
                 const url: string =
@@ -39,7 +40,7 @@ const Blog = () => {
             }
         }
         fetchData()
-    }, [])
+    }, [false])
     return (
         <div className={c.blog}>
             <PagesTop title="blog" />
